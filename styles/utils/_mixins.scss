@@ -1,0 +1,24 @@
+$phone: 390px;
+$tablet: 834px;
+$pc: 991px;
+$large-pc: 1440px;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == small {
+    @media (min-width: $phone) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (min-width: $pc) {
+      @content;
+    }
+  } @else if $breakpoint == larger {
+    @media (min-width: $large-pc) {
+      @content;
+    }
+  }
+}
