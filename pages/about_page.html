@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main_container">
+        <section class="how_works_section">
+          <article class="how_works_card">
+            <h2 class="card_title">ჩვენ შესახებ</h2>
+            <div class="paragraphs_box">
+              <p class="card_text">
+                ქართული ენის მორფოლოგიური ანალიზატორი შეიქმნა ილიას სახელმწიფო
+                უნივერსიტეტისა და შოთა რუსთაველის საქართველოს ეროვნული
+                სამეცნიერო ფონდის სხვადასხვა დროს ერთობლივი კვლევითი პროექტების
+                ფარგლებში.
+              </p>
+              <p class="card_text">
+                QartNLP არის ქართული ენის გაციფრულების პლატფორმა, რომელიც
+                მუშაობს ენის დახვეწილი მოდელის ჩამოყალიბებაზე. მისი მიზანია
+                ინდუსტრიული დონის ღია ხელსაწყოს შექმნა, რომლის მეშვეობითაც
+                შესაძლებელი იქნება ენის ციფრული დამუშავება.
+              </p>
+            </div>
+          </article>
+          <article class="on_project_worked_card">
+            <h2 class="card_title">პროექტზე მუშაობდნენ</h2>
+            <div class="articles_box"></div>
+          </article>
+        </section>
+        <section class="forms_section">
+          <div class="forms_title_section">
+            <h2 class="section_title">საკონტაქტო ინფორმაცია</h2>
+            <address class="forms_address">
+              ქაქუცა ჩოლოყაშვილის გამზირი 3/5    
+            </address>
+            <a class="telephone_number" href="tel:+995 32 111 11 11"
+              >(+995 32) 111 11 11</a
+            >
+          </div>
+          <div class="forms_input_section">
+            <form action="">
+              <div>
+                <label for="">სახელი, გვარი</label>
+                <input type="text" required />
+              </div>
+              <div>
+                <label for="">ელ-ფოსტა</label>
+                <input type="email" required />
+              </div>
+              <div class="forms_textarea">
+                <div class="form_title_counter">
+                  <div><label for="text_input">შეტყობინება</label></div>
+
+                  <div>
+                    <output id="word_count" for="text_input" aria-live="polite"
+                      >0/250</output
+                    >
+                  </div>
+                </div>
+                <textarea
+                  name="text_input"
+                  id="text_input"
+                  required
+                  placeholder="ტექსტი"
+                ></textarea>
+              </div>
+              <div class="not_in_grid">
+                <div><input type="submit" value="გაგზავნა" /></div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
