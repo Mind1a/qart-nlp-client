@@ -146,4 +146,331 @@ table {
 
 button {
   cursor: pointer;
+}
+
+@font-face {
+  font-family: "NotoSansGeorgian";
+  src: url("../../assets/fonts/NotoSansGeorgian-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NotoSansGeorgianSemiBold";
+  src: url("../../assets/fonts/NotoSansGeorgian-SemiBold.ttf") format("truetype");
+}
+body {
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "NotoSansGeorgian";
+}
+body .section_1_content {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 538px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../../assets/images/banner-image.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 94px;
+}
+@media only screen and (max-width: 719px) {
+  body .section_1_content {
+    margin-top: 24px;
+    max-width: 398px;
+    min-height: 302px;
+    background: linear-gradient(rgba(0, 6, 14, 0.85), rgba(0, 6, 15, 0.6)), url("../../assets/images/banner-image-responsive.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+  }
+}
+body .section_1_content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+  color: #e6e6e6;
+  margin-bottom: 48px;
+}
+@media only screen and (max-width: 719px) {
+  body .section_1_content h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 32px;
+  }
+}
+body .section_1_content p {
+  max-width: 90ch;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #e6e6e6;
+  margin-bottom: 72px;
+}
+@media only screen and (max-width: 719px) {
+  body .section_1_content p {
+    font-size: 12px;
+    margin-bottom: 24px;
+    line-height: 18px;
+    max-width: 374px;
+  }
+}
+body .section_1_content .buttons {
+  display: flex;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
+}
+@media only screen and (max-width: 719px) {
+  body .section_1_content .buttons {
+    min-height: 104px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+body .section_1_content .buttons div {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 186px;
+  font-feature-settings: "case" on;
+}
+@media only screen and (max-width: 719px) {
+  body .section_1_content .buttons div {
+    min-height: 44px;
+    min-width: 171px;
+  }
+}
+body .section_1_content .buttons div a {
+  font-weight: 400;
+  line-height: 21.76px;
+  transition: color 0.3s ease;
+  padding: 12px 32px;
+}
+@media only screen and (max-width: 719px) {
+  body .section_1_content .buttons div a {
+    font-size: 14px;
+  }
+}
+body .section_1_content .buttons div:nth-child(1) {
+  background-color: #F2F6FC;
+}
+body .section_1_content .buttons div:nth-child(1) a {
+  color: #232B48;
+}
+body .section_1_content .buttons div:nth-child(2) {
+  border: 1px solid #F2F6FC;
+}
+body .section_1_content .buttons div:nth-child(2) a {
+  color: #F2F6FC;
+  padding: 8px 30px;
+}
+body .section_1_content .buttons div:hover {
+  background-color: #496ac1;
+  border-color: #496ac1;
+}
+body .section_1_content .buttons div:hover a {
+  color: #F2F6FC;
+}
+body .opportunities_section {
+  max-width: 1184px;
+  width: 100%;
+  margin: 94px auto 184px;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section {
+    margin: 48px 0 64px;
+  }
+}
+body .opportunities_section h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  color: #232B48;
+  text-align: center;
+  font-feature-settings: "case" on;
+  font-family: "NotoSansGeorgianSemiBold", sans-serif;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section h3 {
+    font-size: 24px;
+  }
+}
+body .opportunities_section .blocks {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks {
+    margin: 16px 16px 0 16px;
+  }
+}
+body .opportunities_section .blocks .block {
+  max-width: 576px;
+  width: 100%;
+  max-height: 528px;
+  height: 100%;
+  background-color: #E2EAF7;
+  border-radius: 16px;
+  gap: 24px;
+  text-align: center;
+  padding: 24px 24px 32px;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block {
+    max-width: 398px;
+    min-height: 390.41px;
+    padding: 16px 16px 20px;
+    gap: 12px;
+  }
+}
+body .opportunities_section .blocks .block .image {
+  max-width: 528px;
+  width: 100%;
+  max-height: 292px;
+  height: 100%;
+  margin: auto auto 24px;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block .image {
+    max-width: 366px;
+    max-height: 202.4px;
+    margin-bottom: 12px;
+  }
+}
+body .opportunities_section .blocks .block .image img {
+  max-width: 528px;
+  width: 100%;
+  max-height: 292px;
+  height: 100%;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block .image img {
+    max-width: 366px;
+    max-height: 202.4px;
+  }
+}
+body .opportunities_section .blocks .block h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #232B48;
+  padding: 8px;
+  font-feature-settings: "case" on;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block h4 {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0px;
+  }
+}
+body .opportunities_section .blocks .block p {
+  line-height: 24px;
+  color: #232B48;
+  max-width: 408px;
+  margin: 12px auto 17px;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+body .opportunities_section .blocks .block:nth-child(5), body .opportunities_section .blocks .block:nth-child(6), body .opportunities_section .blocks .block:nth-child(7) {
+  max-width: 1184px;
+  width: 100%;
+  max-height: 798px;
+  height: 100%;
+  height: auto;
+  padding: 24px;
+  margin: 0 16px;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block:nth-child(5), body .opportunities_section .blocks .block:nth-child(6), body .opportunities_section .blocks .block:nth-child(7) {
+    max-width: 398px;
+    min-height: 390.41px;
+    padding: 16px 16px 20px;
+    gap: 12px;
+  }
+}
+body .opportunities_section .blocks .block:nth-child(5) .image, body .opportunities_section .blocks .block:nth-child(6) .image, body .opportunities_section .blocks .block:nth-child(7) .image {
+  max-width: 1136px;
+  width: 100%;
+  max-height: 554px;
+  height: 100%;
+  margin-bottom: 32px;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block:nth-child(5) .image, body .opportunities_section .blocks .block:nth-child(6) .image, body .opportunities_section .blocks .block:nth-child(7) .image {
+    max-width: 366px;
+    max-height: 202.4px;
+    margin-bottom: 12px;
+  }
+}
+body .opportunities_section .blocks .block:nth-child(5) .image img, body .opportunities_section .blocks .block:nth-child(6) .image img, body .opportunities_section .blocks .block:nth-child(7) .image img {
+  max-width: 1136px;
+  width: 100%;
+  max-height: 554px;
+  height: 100%;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block:nth-child(5) .image img, body .opportunities_section .blocks .block:nth-child(6) .image img, body .opportunities_section .blocks .block:nth-child(7) .image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+body .opportunities_section .blocks .block:nth-child(5) p, body .opportunities_section .blocks .block:nth-child(6) p, body .opportunities_section .blocks .block:nth-child(7) p {
+  max-width: 810px;
+  min-height: 48px;
+  margin: 12px auto 24px;
+}
+body .opportunities_section .blocks .block .see_more {
+  border: 1px solid #496ac1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 12px 32px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #F2F6FC;
+  font-feature-settings: "case" on;
+  max-width: 164px;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block .see_more {
+    max-width: 152px;
+  }
+}
+body .opportunities_section .blocks .block .see_more a {
+  color: #496ac1;
+}
+@media only screen and (max-width: 719px) {
+  body .opportunities_section .blocks .block .see_more a {
+    font-size: 14px;
+  }
+}
+body .opportunities_section .blocks .block .see_more:hover {
+  background-color: #496ac1;
+}
+body .opportunities_section .blocks .block .see_more:hover a {
+  color: #F2F6FC;
 }/*# sourceMappingURL=global.css.map */
