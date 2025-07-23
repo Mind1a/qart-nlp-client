@@ -164,8 +164,6 @@ body {
   font-family: "NotoSansGeorgian";
 }
 body .section_1_content {
-  max-width: 1180px;
-  width: 100%;
   margin: 0 auto;
   min-height: 538px;
   display: flex;
@@ -178,11 +176,12 @@ body .section_1_content {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 94px;
+  margin-inline: 16px;
+  max-width: calc(100% - 32px);
 }
 @media only screen and (max-width: 719px) {
   body .section_1_content {
     margin-top: 24px;
-    max-width: 398px;
     min-height: 302px;
     background: linear-gradient(rgba(0, 6, 14, 0.85), rgba(0, 6, 15, 0.6)), url("../../assets/images/banner-image-responsive.jpg");
     background-size: cover;
