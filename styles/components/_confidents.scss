@@ -1,0 +1,41 @@
+.confidential-politic-main {
+  font-family: "Noto Sans Georgian", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #232b48;
+
+  h2 {
+    line-height: 52px;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 94px 0;
+    max-width: 1180px;
+  }
+  .text {
+    margin-bottom: 36px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+  }
+ ol {
+  list-style: decimal !important;
+}
+  .top-text-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1180px;
+    text-align: justify;
+
+    .split {
+      padding: 32px 0;
+
+      display: flex;
+      flex-direction: column;
+    }
+    .subtext {
+      margin-top: 10px;
+    }
+  }
+}

@@ -255,9 +255,9 @@ footer .footer-wrapper {
   width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
 }
 footer .footer-wrapper .privacy {
   display: flex;
@@ -284,4 +284,43 @@ footer .footer-wrapper .logo-wrapper a .unilab {
 footer .footer-wrapper .logo-wrapper a .iliauni {
   width: 75px;
   height: 76px;
+}
+
+.confidential-politic-main {
+  font-family: "Noto Sans Georgian", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #232b48;
+}
+.confidential-politic-main h2 {
+  line-height: 52px;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 94px 0;
+  max-width: 1180px;
+}
+.confidential-politic-main .text {
+  margin-bottom: 36px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  line-height: 24px;
+}
+.confidential-politic-main ol {
+  list-style: decimal !important;
+}
+.confidential-politic-main .top-text-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1180px;
+  text-align: justify;
+}
+.confidential-politic-main .top-text-section .split {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+}
+.confidential-politic-main .top-text-section .subtext {
+  margin-top: 10px;
 }/*# sourceMappingURL=global.css.map */

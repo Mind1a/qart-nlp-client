@@ -6,9 +6,9 @@ footer {
   .footer-wrapper {
     @include container();
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
 
     .privacy {
       display: flex;

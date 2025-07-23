@@ -1,6 +1,6 @@
+@import"../utils/variables";
+@import "../utils/mixins";
 body {
-  // font-family: "FNotoSansGeorgian", sans-serif;
-
   header {
     font-family: "FNotoSansGeorgian", sans-serif;
 
@@ -10,16 +10,16 @@ body {
 
       .container {
         @include container;
-       display: flex;
-justify-content: space-between;
-align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         .navigation {
           nav {
             ul {
-             display: flex;
-justify-content: space-between;
-align-items: center;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
 
               li {
                 &:nth-child(1) {
