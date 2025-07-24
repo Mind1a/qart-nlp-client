@@ -37,7 +37,7 @@ textArea.addEventListener("input", (e) => {
   } else {
     wordCount.textContent = "0/250";
   }
-  if (matches.length > 250) {
+  if (matches && matches.length > 250) {
     wordCount.style.color = "red";
     // textArea.style.borderColor = "red";
     textArea.setCustomValidity("Must be less than 250 words");
