@@ -311,7 +311,7 @@ footer .footer-wrapper .logo-wrapper a .iliauni {
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
-  margin-top: 94px;
+  margin: 94px 0 48px;
 }
 .confidential-politic-main .top-text-section {
   display: flex;
@@ -319,7 +319,7 @@ footer .footer-wrapper .logo-wrapper a .iliauni {
   text-align: left;
 }
 .confidential-politic-main .top-text-section .text {
-  margin: 48px 0 36px;
+  margin-bottom: 36px;
   font-weight: 400;
   line-height: 24px;
 }
