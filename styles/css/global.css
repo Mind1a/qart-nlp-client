@@ -100,7 +100,6 @@ video {
   text-decoration: none;
 }
 
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -116,6 +115,8 @@ section {
 }
 
 body {
+  overflow-x: hidden;
+  margin: 0;
   line-height: 1;
   font-family: "NotoSansGeorgian", sans-serif;
   background-color: #f7f7f7;
@@ -130,11 +131,9 @@ blockquote,
 q {
   quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before, blockquote::after,
+q::before,
+q::after {
   content: "";
   content: none;
 }
@@ -146,6 +145,10 @@ table {
 
 button {
   cursor: pointer;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 @font-face {
@@ -161,9 +164,12 @@ body header .header_wrapper {
   padding: 43px 50px;
 }
 body header .header_wrapper .container {
-  max-width: 1180px;
   width: 100%;
-  margin: 0 auto;
+  max-width: 1180px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -251,9 +257,12 @@ footer {
   font-family: "NotoSansGeorgian", sans-serif;
 }
 footer .footer-wrapper {
-  max-width: 1180px;
   width: 100%;
-  margin: 0 auto;
+  max-width: 1180px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -288,39 +297,75 @@ footer .footer-wrapper .logo-wrapper a .iliauni {
 
 .confidential-politic-main {
   font-family: "Noto Sans Georgian", sans-serif;
+  color: #232b48;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #232b48;
+  align-items: flex-start;
+  margin-bottom: 94px;
 }
 .confidential-politic-main h2 {
-  line-height: 52px;
   font-size: 40px;
   font-weight: 700;
-  margin: 94px 0;
-  max-width: 1180px;
-}
-.confidential-politic-main .text {
-  margin-bottom: 36px;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  line-height: 24px;
-}
-.confidential-politic-main ol {
-  list-style: decimal !important;
+  line-height: 52px;
+  margin-top: 94px;
 }
 .confidential-politic-main .top-text-section {
   display: flex;
   flex-direction: column;
-  max-width: 1180px;
-  text-align: justify;
+  text-align: left;
 }
-.confidential-politic-main .top-text-section .split {
-  padding: 32px 0;
+.confidential-politic-main .top-text-section .text {
+  margin: 48px 0 36px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.confidential-politic-main .top-text-section .text-section {
+  line-height: 24px;
+  list-style: decimal;
+  padding-left: 1em;
   display: flex;
   flex-direction: column;
+  gap: 36px;
 }
 .confidential-politic-main .top-text-section .subtext {
-  margin-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 630px) {
+  .confidential-politic-main {
+    padding: 24px 16px;
+  }
+  .confidential-politic-main h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 24px 0;
+  }
+  .confidential-politic-main .top-text-section .text {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 24px;
+  }
+  .confidential-politic-main .top-text-section .text-section {
+    gap: 24px;
+  }
+  header .header_wrapper .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  header .header_wrapper .container .logo {
+    margin-left: 0;
+  }
+  header .header_wrapper .container nav,
+  header .header_wrapper .container .navigation {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
 }/*# sourceMappingURL=global.css.map */

@@ -1,41 +1,93 @@
 .confidential-politic-main {
   font-family: "Noto Sans Georgian", sans-serif;
+  color: #232b48;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #232b48;
+  align-items: flex-start;
+  margin-bottom: 94px;
 
   h2 {
-    line-height: 52px;
     font-size: 40px;
     font-weight: 700;
-    margin: 94px 0;
-    max-width: 1180px;
+    line-height: 52px;
+    margin-top: 94px;
   }
-  .text {
-    margin-bottom: 36px;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    line-height: 24px;
-  }
- ol {
-  list-style: decimal !important;
-}
+
   .top-text-section {
     display: flex;
     flex-direction: column;
-    max-width: 1180px;
-    text-align: justify;
+    text-align: left;
 
-    .split {
-      padding: 32px 0;
+    .text {
+      margin: 48px 0 36px;
+      font-weight: 400;
+      line-height: 24px;
+    }
 
+    .text-section {
+      line-height: 24px;
+      list-style: decimal;
+      padding-left: 1em;
       display: flex;
       flex-direction: column;
+      gap: 36px;
     }
+
     .subtext {
-      margin-top: 10px;
+      margin-top: 6px;
     }
   }
 }
+
+@media (max-width: 630px) {
+  .confidential-politic-main {
+    padding: 24px 16px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      margin: 24px 0;
+    }
+
+    .top-text-section {
+      .text {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 24px;
+      }
+
+      .text-section {
+        gap: 24px;
+      }
+    }
+  }
+
+  header {
+    .header_wrapper {
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        .logo {
+          margin-left: 0;
+        }
+
+        nav,
+        .navigation {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: none;
+  }
+}
+
