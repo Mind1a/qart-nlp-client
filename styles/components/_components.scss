@@ -21,7 +21,7 @@ body {
         margin-inline: 16px;
         max-width: calc(100% - 32px);
 
-        @include responsive(phone) {
+        @include responsive(l-tablet) {
             margin-top: 24px;
             min-height: 302px;
             background:
@@ -40,7 +40,7 @@ body {
             color: $text-color;
             margin-bottom: 48px;
 
-            @include responsive(phone) {
+            @include responsive(l-tablet) {
                 font-size: 24px;
                 margin-bottom: 16px;
                 line-height: 32px;
@@ -55,7 +55,7 @@ body {
             color: $text-color;
             margin-bottom: 72px;
 
-            @include responsive(phone) {
+            @include responsive(l-tablet) {
                 font-size: 12px;
                 margin-bottom: 24px;
                 line-height: 18px;
@@ -67,7 +67,7 @@ body {
             display: flex;
             column-gap: 36px;
 
-            @include responsive(phone) {
+            @include responsive(l-tablet) {
                 min-height: 104px;
                 display: flex;
                 flex-direction: column;
@@ -85,7 +85,7 @@ body {
                 min-width: 186px;
                 font-feature-settings: 'case' on;
 
-                @include responsive(phone) {
+                @include responsive(l-tablet) {
                     min-height: 44px;
                     min-width: 171px;
                 }
@@ -96,7 +96,7 @@ body {
                     transition: color 0.3s ease;
                     padding: 12px 32px;
 
-                    @include responsive(phone) {
+                    @include responsive(l-tablet) {
                         font-size: 14px;
                     }
 
@@ -136,7 +136,7 @@ body {
         width: 100%;
         margin: 94px auto 184px;
 
-        @include responsive(phone) {
+        @include responsive(l-tablet) {
             margin: 48px 0 64px;
         }
 
@@ -149,7 +149,7 @@ body {
             font-feature-settings: 'case' on;
             font-family: "NotoSansGeorgianSemiBold", sans-serif;
 
-            @include responsive(phone) {
+            @include responsive(l-tablet) {
                 font-size: 24px;
             }
         }
@@ -162,7 +162,7 @@ body {
             flex-wrap: wrap;
             gap: 32px;
 
-            @include responsive(phone) {
+            @include responsive(l-tablet) {
                 margin: 16px 16px 0 16px;
 
             }
@@ -178,8 +178,8 @@ body {
                 text-align: center;
                 padding: 24px 24px 32px;
 
-                @include responsive(phone) {
-                    max-width: 398px;
+                @include responsive(l-tablet) {
+                    max-width: 100%;
                     min-height: 390.41px;
                     padding: 16px 16px 20px;
                     gap: 12px;
@@ -192,7 +192,7 @@ body {
                     height: 100%;
                     margin: auto auto 24px;
 
-                    @include responsive(phone) {
+                    @include responsive(l-tablet) {
                         max-width: 366px;
                         max-height: 202.40px;
                         margin-bottom: 12px;
@@ -204,7 +204,7 @@ body {
                         max-height: 292px;
                         height: 100%;
 
-                        @include responsive(phone) {
+                        @include responsive(l-tablet) {
                             max-width: 366px;
                             max-height: 202.40px;
                         }
@@ -219,7 +219,7 @@ body {
                     padding: 8px;
                     font-feature-settings: 'case' on;
 
-                    @include responsive(phone) {
+                    @include responsive(l-tablet) {
                         font-size: 16px;
                         line-height: 24px;
                         padding: 0px;
@@ -235,7 +235,7 @@ body {
                     display: flex;
                     align-items: center;
 
-                    @include responsive(phone) {
+                    @include responsive(l-tablet) {
                         font-size: 12px;
                         line-height: 18px;
                     }
@@ -250,10 +250,9 @@ body {
                     height: 100%;
                     height: auto;
                     padding: 24px;
-                    margin: 0 16px;
 
-                    @include responsive(phone) {
-                        max-width: 398px;
+                    @include responsive(l-tablet) {
+                        max-width: 100%;
                         min-height: 390.41px;
                         padding: 16px 16px 20px;
                         gap: 12px;
@@ -266,7 +265,7 @@ body {
                         height: 100%;
                         margin-bottom: 32px;
 
-                        @include responsive(phone) {
+                        @include responsive(l-tablet) {
                             max-width: 366px;
                             max-height: 202.40px;
                             margin-bottom: 12px;
@@ -278,7 +277,7 @@ body {
                             max-height: 554px;
                             height: 100%;
 
-                            @include responsive(phone) {
+                            @include responsive(l-tablet) {
                                 max-width: 100%;
                                 height: auto;
                             }
@@ -305,14 +304,14 @@ body {
                     max-width: 164px;
                     margin: auto;
 
-                    @include responsive(phone) {
+                    @include responsive(l-tablet) {
                         max-width: 152px;
                     }
 
                     a {
                         color: $header-bg-color;
 
-                        @include responsive(phone) {
+                        @include responsive(l-tablet) {
                             font-size: 14px;
                         }
 

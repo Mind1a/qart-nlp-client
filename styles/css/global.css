@@ -179,7 +179,7 @@ body .section_1_content {
   margin-inline: 16px;
   max-width: calc(100% - 32px);
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .section_1_content {
     margin-top: 24px;
     min-height: 302px;
@@ -197,7 +197,7 @@ body .section_1_content h2 {
   color: #e6e6e6;
   margin-bottom: 48px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .section_1_content h2 {
     font-size: 24px;
     margin-bottom: 16px;
@@ -212,7 +212,7 @@ body .section_1_content p {
   color: #e6e6e6;
   margin-bottom: 72px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .section_1_content p {
     font-size: 12px;
     margin-bottom: 24px;
@@ -225,7 +225,7 @@ body .section_1_content .buttons {
   -moz-column-gap: 36px;
        column-gap: 36px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .section_1_content .buttons {
     min-height: 104px;
     display: flex;
@@ -244,7 +244,7 @@ body .section_1_content .buttons div {
   min-width: 186px;
   font-feature-settings: "case" on;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .section_1_content .buttons div {
     min-height: 44px;
     min-width: 171px;
@@ -256,7 +256,7 @@ body .section_1_content .buttons div a {
   transition: color 0.3s ease;
   padding: 12px 32px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .section_1_content .buttons div a {
     font-size: 14px;
   }
@@ -286,7 +286,7 @@ body .opportunities_section {
   width: 100%;
   margin: 94px auto 184px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section {
     margin: 48px 0 64px;
   }
@@ -300,7 +300,7 @@ body .opportunities_section h3 {
   font-feature-settings: "case" on;
   font-family: "NotoSansGeorgianSemiBold", sans-serif;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section h3 {
     font-size: 24px;
   }
@@ -313,7 +313,7 @@ body .opportunities_section .blocks {
   flex-wrap: wrap;
   gap: 32px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks {
     margin: 16px 16px 0 16px;
   }
@@ -329,9 +329,9 @@ body .opportunities_section .blocks .block {
   text-align: center;
   padding: 24px 24px 32px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block {
-    max-width: 398px;
+    max-width: 100%;
     min-height: 390.41px;
     padding: 16px 16px 20px;
     gap: 12px;
@@ -344,7 +344,7 @@ body .opportunities_section .blocks .block .image {
   height: 100%;
   margin: auto auto 24px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block .image {
     max-width: 366px;
     max-height: 202.4px;
@@ -357,7 +357,7 @@ body .opportunities_section .blocks .block .image img {
   max-height: 292px;
   height: 100%;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block .image img {
     max-width: 366px;
     max-height: 202.4px;
@@ -371,7 +371,7 @@ body .opportunities_section .blocks .block h4 {
   padding: 8px;
   font-feature-settings: "case" on;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block h4 {
     font-size: 16px;
     line-height: 24px;
@@ -387,7 +387,7 @@ body .opportunities_section .blocks .block p {
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block p {
     font-size: 12px;
     line-height: 18px;
@@ -400,11 +400,10 @@ body .opportunities_section .blocks .block:nth-child(5), body .opportunities_sec
   height: 100%;
   height: auto;
   padding: 24px;
-  margin: 0 16px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block:nth-child(5), body .opportunities_section .blocks .block:nth-child(6), body .opportunities_section .blocks .block:nth-child(7) {
-    max-width: 398px;
+    max-width: 100%;
     min-height: 390.41px;
     padding: 16px 16px 20px;
     gap: 12px;
@@ -417,7 +416,7 @@ body .opportunities_section .blocks .block:nth-child(5) .image, body .opportunit
   height: 100%;
   margin-bottom: 32px;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block:nth-child(5) .image, body .opportunities_section .blocks .block:nth-child(6) .image, body .opportunities_section .blocks .block:nth-child(7) .image {
     max-width: 366px;
     max-height: 202.4px;
@@ -430,7 +429,7 @@ body .opportunities_section .blocks .block:nth-child(5) .image img, body .opport
   max-height: 554px;
   height: 100%;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block:nth-child(5) .image img, body .opportunities_section .blocks .block:nth-child(6) .image img, body .opportunities_section .blocks .block:nth-child(7) .image img {
     max-width: 100%;
     height: auto;
@@ -454,7 +453,7 @@ body .opportunities_section .blocks .block .see_more {
   max-width: 164px;
   margin: auto;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block .see_more {
     max-width: 152px;
   }
@@ -462,7 +461,7 @@ body .opportunities_section .blocks .block .see_more {
 body .opportunities_section .blocks .block .see_more a {
   color: #496ac1;
 }
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 1024px) {
   body .opportunities_section .blocks .block .see_more a {
     font-size: 14px;
   }
