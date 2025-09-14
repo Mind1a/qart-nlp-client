@@ -1,26 +1,36 @@
-$phone: 390px;
-$tablet: 834px;
-$pc: 991px;
-$large-pc: 1440px;
+// for responsive design
 
-@mixin responsive($breakpoint) {
-  @if $breakpoint == small {
-    @media (min-width: $phone) {
-      @content;
-    }
-  } @else if $breakpoint == medium {
-    @media (min-width: $tablet) {
-      @content;
-    }
-  } @else if $breakpoint == large {
-    @media (min-width: $pc) {
-      @content;
-    }
-  } @else if $breakpoint == larger {
-    @media (min-width: $large-pc) {
-      @content;
-    }
-  }
+// For Styles
+// @mixin container {
+//   max-width: 1180px;
+//   width: 100%;
+//   margin: 0 auto;
+// }
+
+// @mixin text_font_style($fc, $ff, $fs, $fw) {
+//   color: $fc;
+//   font-family: $ff;
+//   font-size: $fs;
+//   font-weight: $fw;
+//   line-height: normal;
+// }
+
+
+@mixin purpleTitle() {
+  font-size: 28px;
+  font-weight: bold;
+  color: $header-bg-color;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'NotoSansGeorgian';
+  src: url('../../assets/fonts/NotoSansGeorgian-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NotoSansGeorgianSemiBold';
+  src: url('../../assets/fonts/NotoSansGeorgian-SemiBold.ttf') format('truetype');
 }
 
 
