@@ -1,5 +1,3 @@
-// for responsive design
-
 // For Styles
 // @mixin container {
 //   max-width: 1180px;
@@ -15,7 +13,6 @@
 //   line-height: normal;
 // }
 
-
 @mixin purpleTitle() {
   font-size: 28px;
   font-weight: bold;
@@ -24,18 +21,21 @@
 }
 
 @font-face {
-  font-family: 'NotoSansGeorgian';
-  src: url('../../assets/fonts/NotoSansGeorgian-Regular.ttf') format('truetype');
+  font-family: "NotoSansGeorgian";
+  src: url("../../assets/fonts/NotoSansGeorgian-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NotoSansGeorgianSemiBold';
-  src: url('../../assets/fonts/NotoSansGeorgian-SemiBold.ttf') format('truetype');
+  font-family: "NotoSansGeorgianSemiBold";
+  src: url("../../assets/fonts/NotoSansGeorgian-SemiBold.ttf")
+    format("truetype");
 }
 
-
-
 // for responsive design
+// $phone: 430px;
+// $tablet: 834px;
+// $pc: 991px;
+// $large-pc: 1440px;
 
 $l-pc: 1420px; // large PC screen size
 $pc: 1260px; // PC screen size.
@@ -80,7 +80,7 @@ $pc-max: $pc - 1;
 
 // For Styles
 @mixin container {
-   width: 100%;
+  width: 100%;
   max-width: 1180px;
   padding-left: 16px;
   padding-right: 16px;

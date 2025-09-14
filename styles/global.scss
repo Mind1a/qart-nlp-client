@@ -1,3 +1,6 @@
+@use "./utils/reset";
+@use "./components/main_container";
+@use "./components/about_page";
 @import "./utils/reset";
 @import "./utils/fonts";
 @import "./utils/mixins";

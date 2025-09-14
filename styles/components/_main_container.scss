@@ -1,0 +1,22 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: $main_bg;
+}
+
+.main_container {
+  max-width: 1440px;
+  padding: 0 16px;
+  @include responsive(small) {
+    padding: 0 calc((47 - 16) / (834 - 430) * (100vw - 430px) + 16px);
+  }
+  @include responsive(medium) {
+    padding: 0 calc((128 - 47) / (1440 - 834) * (100vw - 834px) + 47px);
+  }
+  @include responsive(larger) {
+    padding: 0 128px;
+  }
+}

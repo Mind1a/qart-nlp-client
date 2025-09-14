@@ -1,0 +1,212 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.how_works_section {
+  font-family: "NotoSansGeorgian";
+  color: $text_color;
+  .how_works_card {
+    .card_title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .paragraphs_box {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .card_text {
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+  .on_project_worked_card {
+    padding: 0 20px;
+    margin-top: 48px;
+    .card_title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 120%;
+      text-align: center;
+    }
+    .articles_box {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 32px;
+      margin-top: 24px;
+      .on_project_article {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: $card_bg;
+        .article_title {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 130%;
+        }
+        .article_subtitle {
+          line-height: 130%;
+          margin-bottom: 6px;
+        }
+        .article_icon {
+          display: flex;
+          gap: 10px;
+          img {
+            width: 24px;
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+    }
+  }
+}
+.forms_section {
+  color: $text_color;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  .forms_title_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section_title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 130%;
+    }
+    .telephone_number {
+      margin-top: 7px;
+      color: $text_color;
+      font-weight: 350;
+      font-size: 16px;
+    }
+    .forms_address {
+      margin-top: 24px;
+      font-size: 16px;
+      font-weight: 350;
+
+      line-height: 130%;
+    }
+  }
+  .forms_input_section {
+    margin-top: 24px;
+    form {
+      display: grid;
+      grid-template-columns: auto;
+      column-gap: 32px;
+      row-gap: 32px;
+      div {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        input {
+          border: 1px solid $form_border_color;
+          border-radius: 8px;
+          height: 44px;
+          padding: 0 24px;
+          font-size: 16px;
+        }
+        textarea {
+          border: 1px solid $form_border_color;
+          border-radius: 8px;
+          padding: 24px;
+          height: 340px;
+          resize: none;
+          font-size: 16px;
+          &::placeholder {
+            color: $form_placeholder;
+          }
+        }
+      }
+      .forms_textarea {
+        grid-column: 1/-1;
+        .form_title_counter {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+      .not_in_grid {
+        grid-column: 1/-1;
+        div {
+          display: flex;
+          input {
+            margin: 0 auto;
+            padding: 12px 32px;
+            background-color: $primary_bg;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(medium) {
+  .how_works_section {
+    .how_works_card {
+      .card_title {
+        font-size: 40px;
+        margin-bottom: 48px;
+      }
+      .paragraphs_box {
+        gap: 32px;
+      }
+      .card_text {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .on_project_worked_card {
+      .card_title {
+        font-size: 32px;
+      }
+      .articles_box {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 48px;
+      }
+    }
+  }
+  .forms_section {
+    margin-top: 94px;
+    margin-bottom: 264px;
+    .forms_title_section {
+      .section_title {
+        font-size: 32px;
+      }
+      .telephone_number {
+        font-size: 18px;
+      }
+      .forms_address {
+        margin-top: 48px;
+        font-size: 18px;
+      }
+    }
+    .forms_input_section {
+      margin-top: 31px;
+      form {
+        grid-template-columns: 1fr 1fr;
+        div {
+          label {
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+          input {
+            font-size: 16px;
+          }
+          textarea {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
