@@ -101,7 +101,7 @@ video {
   text-decoration: none;
 }
 
-/* HTML5 display-role reset for older browsers */
+// HTML5 display-role reset for older browsers
 article,
 aside,
 details,
@@ -117,8 +117,10 @@ section {
 }
 
 body {
+  overflow-x: hidden;
+  margin: 0;
   line-height: 1;
-  font-family: "Work Sans", sans-serif;
+  font-family: "NotoSansGeorgian", sans-serif;
   background-color: #f7f7f7;
 }
 
@@ -130,14 +132,12 @@ ul {
 blockquote,
 q {
   quotes: none;
-}
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+  &::before,
+  &::after {
+    content: "";
+    content: none;
+  }
 }
 
 table {
@@ -147,4 +147,8 @@ table {
 
 button {
   cursor: pointer;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
 }
