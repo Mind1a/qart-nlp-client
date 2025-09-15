@@ -1,0 +1,118 @@
+@import"../utils/variables";
+@import "../utils/mixins";
+body {
+  header {
+    font-family: "FNotoSansGeorgian", sans-serif;
+
+    .header_wrapper {
+      background-color: $header-bg-color;
+      padding: 43px 50px;
+
+      .container {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navigation {
+          nav {
+            ul {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              li {
+                &:nth-child(1) {
+                  margin-right: 40px;
+                }
+
+                &:nth-child(2) {
+                  margin-right: 80px;
+                }
+
+                a {
+                  color: $text-color-02;
+                  font-weight: 700;
+                  font-family: "NotoSansGeorgian", sans-serif;
+                  line-height: 24px;
+                  transition: 0.3s;
+
+                  &:hover {
+                    color: $transparentsnow;
+                  }
+                }
+              }
+
+              .toggle-language {
+                position: relative;
+                width: 56px;
+                height: 28px;
+
+                .toggle-button {
+                  display: none;
+
+                  &:checked + .toggle-label {
+                    &::before {
+                      transform: translateX(30px);
+                    }
+
+                    .toggle-label-on {
+                      display: block;
+                    }
+                  }
+
+                  &:not(:checked) + .toggle-label .toggle-label-off {
+                    display: block;
+                  }
+                }
+
+                .toggle-label {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  background-color: $text-color-02;
+                  border-radius: 16px;
+                  position: relative;
+                  cursor: pointer;
+                  transition: background-color 0.2s;
+
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $header-bg-color;
+                    border-radius: 100px;
+                    top: 4px;
+                    left: 4px;
+                    transition: transform 0.3s;
+                  }
+
+                  .toggle-label-on,
+                  .toggle-label-off {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 30px;
+                    color: $text-color-02;
+                  }
+
+                  .toggle-label-on {
+                    left: -12px;
+                    color: $header-bg-color;
+                  }
+
+                  .toggle-label-off {
+                    right: -12px;
+                    color: $header-bg-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

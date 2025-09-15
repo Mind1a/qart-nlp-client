@@ -1,8 +1,11 @@
 @use "./utils/reset";
 @use "./components/main_container";
-// @use "./utils/variables";
 @use "./components/about_page";
-
-// @import "./utils/reset";
-// @import "./utils/variables";
-// @import "./utils/mixins";
+@import "./utils/reset";
+@import "./utils/fonts";
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./components/components";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/confidents";
