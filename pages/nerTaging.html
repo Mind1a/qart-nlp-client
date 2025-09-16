@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="container">
+          <!-- logo -->
+          <div class="logo">
+            <a href="../index.html"
+              ><img src="../assets/images/svg/logo.svg" alt="logo"
+            /></a>
+          </div>
+
+          <!-- navigation -->
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li><a href="#">ჩვენ შესახებ</a></li>
+                <li><a href="./authorization.html">ავტორიზაცია</a></li>
+
+                <!-- Toggle language button -->
+                <div class="toggle-language">
+                  <input
+                    type="checkbox"
+                    id="toggle-button"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main_container">
+        <section class="ner_tagging_section">
+          <h2 class="ner_tagging_title">NER ტეგირება</h2>
+          <div class="text_container">
+            <p>
+              NER, ანუ სახელდებული ერთეულების ამოცნობა, ენის დამუშავების
+              ერთ-ერთი ყველაზე მნიშვნელოვანი ეტაპია. მისი მიზანია, ტექსტში
+              გამოყოს ისეთი კონკრეტული ობიექტები, როგორიცაა ადამიანების
+              სახელები, ქალაქები, ორგანიზაციები ან თარიღები. წარმოიდგინე,
+              კითხულობ სტატიას და ავტომატურად იცი, რომელ ნაწილშია ხსენებული
+              ქალაქი, ვინ არის ადამიანი ან რაზეა საუბარი დროში – სწორედ ამას
+              აკეთებს NER სისტემა.
+            </p>
+            <p>
+              ჩვენი პლატფორმა ამ ამოცანას ქართულ ენაზე განსაკუთრებით ეფექტურად
+              ასრულებს. ტექსტში არსებული სახელდებული ერთეულები ავტომატურად
+              აღინიშნება და თითოეულს მიენიჭება შესაბამისი ტიპი, რაც ძალიან
+              გეხმარება ტექსტის გაანალიზებაში და სტრუქტურირებაში. შეგიძლია
+              უბრალოდ ჩასვა ტექსტი და წამებში დაინახო, სად არის ვინ, რა და
+              როდის. ეს განსაკუთრებით გამოსადეგია მათთვის, ვინც ტექსტებზე
+              მუშაობს — იქნება ეს კვლევა, ჟურნალისტიკა თუ უბრალოდ
+              ცნობისმოყვარეობა.
+            </p>
+          </div>
+          <!-- <img src="../assets/images/svg/Frame 2207.svg" alt="" /> -->
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="privacy">
+          <a href="./confidentiality.html">კონფიდენციალურობის პოლიტიკა</a>
+          <a href="./rules.html">გამოყენების წესები</a>
+        </div>
+        <div class="logo-wrapper">
+          <a href="https://unilab.iliauni.edu.ge/">
+            <img
+              class="unilab"
+              src="../assets/images/svg/logo_unilab.svg"
+              alt="unilab logo"
+            />
+          </a>
+          <a href="https://iliauni.edu.ge/">
+            <img
+              class="iliauni"
+              src="../assets/images/svg/logo_iliauni.svg"
+              alt="iliauni logo"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/lamatizationValidation.js"></script>
+  </body>
+</html>
