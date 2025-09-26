@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authorization</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+</head>
+
+<body class="body">
+    <div class="container" id="container">
+        <a href="../index.html"><img src="../assets/images/svg/cancel.svg" class="cancel" id="blue_X" /></a>
+        <a href="../index.html"><img src="../assets/images/svg/cancel-white.svg" class="cancel_white"
+                id="white_X" /></a>
+
+        <div class="form_container sign_in" id="sign_in">
+            <form id="authorization_form" novalidate>
+                <h2>ავტორიზაცია</h2>
+
+                <label for="authorization_email_input" id="email_label" class="authorization">ელ.ფოსტა</label>
+                <input type="email" id="authorization_email_input" name="email" class="authorization"
+                    autocomplete="email" />
+                <p class="error_message" id="email_error_message"></p>
+
+                <label for="authorization_password" id="password_label" class="authorization">პაროლი</label>
+                <div class="password password_container" id="password_input_id">
+                    <input type="password" id="authorization_password" name="password" class="authorization" />
+                    <div id="authorization_toggleEye" class="auth_eye_icon">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                                stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                                stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="slash"></div>
+                    </div>
+                </div>
+                <p class="error_message" id="password_error_message"></p>
+
+                <span class="forget" id="forget"><a href="forget_pssword.html">დაგავიწყდათ პაროლი?</a></span>
+                <button type="submit" id="submitBtn">ავტორიზაცია</button>
+                <button type="button" class="google"><img src="../assets/images/svg/google-logo.svg" />შესვლა
+                    Google-თი</button>
+                <button type="button" class="responsive_register_btn" id="responsive_register_btn">რეგისტრაცია</button>
+            </form>
+        </div>
+        <div class="error_warning" id="error_warning">
+            <img src="../assets/images/svg/error.svg" alt="error_warning" class="error_warning_img">
+            <h3>დაფიქსირდა შეცდომა ცადე თავიდან</h3>
+            <button id="error_close"><img src="../assets/images/svg/error_close.svg" alt="error_close"></button>
+        </div>
+
+        <div class="form_container sign_up">
+            <form id="register_form" novalidate>
+                <h2>რეგისტრაცია</h2>
+                <div class="person">
+                    <div>
+                        <label for="name_input" id="name_label">სახელი *</label>
+                        <input type="text" id="name_input" name="name_input" />
+                        <p class="error_message" id="register_name_error_message"></p>
+                    </div>
+                    <div>
+                        <label for="surname_input" id="surname_label">გვარი *</label>
+                        <input type="text" id="surname_input" name="surname" />
+                        <p class="error_message" id="register_surname_error_message"></p>
+                    </div>
+                </div>
+                <label for="registration_email_input" id="registration_email_label">ელ.ფოსტა *</label>
+                <input type="email" id="registration_email_input" name="email" autocomplete="email" />
+                <p class="error_message" id="register_email_error_message"></p>
+                <label for="registration_password_input" id="registration_password_label">პაროლი *</label>
+                <div class="password">
+                    <input type="password" id="registration_password_input" name="password" />
+                    <div id="registration_toggleEye" class="eye_icon">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                                stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                                stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="slash"></div>
+                    </div>
+                </div>
+                <p class="error_message" id="register_password_error_message"></p>
+                <label for="repeat_password_input" id="repeat_password_label">გაიმეორეთ პაროლი *</label>
+                <div class="password">
+                    <input type="password" id="repeat_password_input" />
+                    <div id="repeat_registration_toggleEye" class="eye_icon">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                                stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                                stroke="#2C2C2C" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="slash"></div>
+                    </div>
+                </div>
+                <p class="error_message" id="repeat_password_error_message"></p>
+                <div class="agreement">
+                    <input type="checkbox" id="agreement_checkbox" class="agreement_checkbox" />
+                    <label for="agreement_checkbox" id="agreement_label">
+                        ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას
+                    </label>
+                </div>
+                <button type="submit" class="register_btn" id="register_btn">რეგისტრაცია</button>
+                <button type="button" class="google">
+                    <img src="../assets/images/svg/google-logo.svg" />Google-ით რეგისტრაცია</button>
+                <button type="button" class="responsive_authorization_btn"
+                    id="responsive_authorization_btn">ავტორიზაცია</button>
+            </form>
+        </div>
+
+
+        <div class="toggle_container">
+            <div class="toggle">
+                <div class="toggle_panel toggle_left">
+                    <img src="../assets/images/svg/logo.svg" alt="logo">
+                    <button class="toggle_btn" id="login">ავტორიზაცია</button>
+                </div>
+                <div class="toggle_panel toggle_right">
+                    <img src="../assets/images/svg/logo.svg" alt="logo">
+                    <button class="toggle_btn" id="register">რეგისტრაცია</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth_register.js"></script>
+</body>
+
+</html>

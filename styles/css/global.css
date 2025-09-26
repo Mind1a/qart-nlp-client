@@ -773,7 +773,6 @@ body .opportunities_section .blocks .block .see_more {
   line-height: 24px;
   background-color: #f2f6fc;
   font-feature-settings: "case" on;
-  max-width: 164px;
   margin: auto;
 }
 @media only screen and (max-width: 1024px) {
@@ -1016,4 +1015,777 @@ footer .footer-wrapper .logo-wrapper a .iliauni {
   footer {
     display: none;
   }
+}
+.body {
+  background-color: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: auto;
+}
+.body .container {
+  display: flex;
+  width: 1180px;
+  max-width: 1180px;
+  height: 100vh;
+  min-height: 700px;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 4px 4px 40px 0 rgba(73, 106, 193, 0.8);
+}
+@media only screen and (max-width: 1024px) {
+  .body .container {
+    box-shadow: none;
+    width: 0px;
+  }
+}
+.body .container .error_warning {
+  display: none;
+  position: absolute;
+  bottom: 72px;
+  left: 106px;
+  z-index: 2;
+  height: 64px;
+  width: 380px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #FF3232;
+  background-color: #FFDFDF;
+  padding: 12px 16px 12px 32px;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .error_warning {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 48px;
+    width: 327px;
+  }
+}
+.body .container .error_warning .error_warning_img {
+  width: 24px;
+}
+.body .container .error_warning button {
+  background-color: inherit;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+.body .container .error_warning h3 {
+  font-size: 14px;
+  line-height: 20px;
+  color: #FF3232;
+  text-align: center;
+  width: 167px;
+}
+.body .container .error_warning.active {
+  display: flex;
+}
+.body .container > div {
+  height: 100vh;
+}
+.body .container span {
+  line-height: 19.2px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+.body .container label {
+  line-height: 19.2px;
+  color: #496ac1;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.body .container .cancel,
+.body .container .cancel_white {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  z-index: 99999;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .cancel,
+  .body .container .cancel_white {
+    display: none !important;
+  }
+}
+.body .container .cancel {
+  display: none;
+}
+.body .container .cancel_white {
+  display: block;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .cancel_white {
+    display: none;
+  }
+}
+.body .container .cancel.active {
+  display: block;
+}
+.body .container .cancel_white.active {
+  display: none;
+}
+.body .container .sign_in {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+.body .container .sign_up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+.body .container .form_container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  transition: all 0.6s ease-in-out;
+  background-color: #F2F6FC;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container {
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+.body .container .form_container .responsive_authorization_btn {
+  display: none;
+  background: transparent;
+  border: 1px solid #496ac1;
+  color: #496ac1;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container .responsive_authorization_btn {
+    display: block;
+  }
+}
+.body .container .form_container .authorization {
+  font-size: 14px;
+}
+.body .container .form_container form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 380px;
+}
+.body .container .form_container form .responsive_register_btn {
+  display: none;
+  background: transparent;
+  border: 1px solid #496ac1;
+  color: #496ac1;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form .responsive_register_btn {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form #submitBtn {
+    margin: 32px 0 16px 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form {
+    display: block;
+    top: 124px;
+    padding: 0px 24px;
+  }
+}
+.body .container .form_container form .error_message {
+  display: none;
+  margin-top: -8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.body .container .form_container form .error_text {
+  color: #e73b37;
+}
+.body .container .form_container form input {
+  border: 1px solid #496ac1;
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  outline: none;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form #authorization_email_input,
+  .body .container .form_container form #authorization_password {
+    margin: 8px 0 16px 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form #forget_password_email_input {
+    margin: 8px 0 16px 0;
+  }
+}
+.body .container .form_container form input:focus {
+  border: 1px solid #496ac1;
+}
+.body .container .form_container form a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.body .container .form_container form h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #496ac1;
+  margin-bottom: 32px;
+  text-align: center;
+  font-feature-settings: "case" on;
+}
+.body .container .form_container form .forget {
+  margin-bottom: 32px;
+}
+.body .container .form_container form .forget a {
+  font-size: 14px;
+  line-height: 20px;
+  color: #496ac1;
+  cursor: pointer;
+}
+.body .container .form_container form button {
+  width: 380px;
+  min-height: 48px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #496ac1;
+  color: #ffffff;
+  border: none;
+  line-height: 24px;
+  cursor: pointer;
+  font-family: "NotoSansGeorgian";
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form button {
+    width: 327px;
+    margin-bottom: 0px;
+  }
+}
+.body .container .form_container form button:hover {
+  background-color: #7795e9;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.body .container .form_container form .register_btn a {
+  padding: 10.5px 115.5px;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form .register_btn {
+    margin-bottom: 16px;
+  }
+}
+.body .container .form_container form .box {
+  cursor: pointer;
+}
+.body .container .form_container form .success_box {
+  display: none;
+}
+.body .container .form_container form .visible {
+  display: block;
+}
+.body .container .form_container form .google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid #496ac1;
+  color: #496ac1;
+}
+@media only screen and (max-width: 1024px) {
+  .body .container .form_container form .google {
+    margin-bottom: 33px;
+  }
+}
+.body .container .form_container form .person {
+  display: flex;
+  gap: 22px;
+}
+.body .container .form_container form .person div {
+  display: flex;
+  flex-direction: column;
+}
+.body .container .form_container form .password {
+  position: relative;
+}
+.body .container .form_container form .password img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+.body .container .form_container form .password #error_hide {
+  display: none;
+}
+.body .container .form_container form .password #hide_password {
+  display: block;
+}
+.body .sign_in {
+  z-index: 2;
+}
+.body .sign_up {
+  opacity: 0;
+  z-index: 1;
+}
+.body .container.active .sign_in {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 0;
+}
+.body .container.active .sign_up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+@keyframes move {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.body .toggle_container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  min-height: 700px;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1000;
+}
+@media only screen and (max-width: 1024px) {
+  .body .toggle_container {
+    display: none;
+  }
+}
+.body .container.active .toggle_container {
+  transform: translateX(-100%);
+}
+.body .toggle {
+  height: 100%;
+  background-color: #496ac1;
+  color: #ffffff;
+  position: absolute;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transition: all 0.6s ease-in-out;
+  display: flex;
+}
+.body .container.active .toggle {
+  transform: translateX(50%);
+}
+.body .toggle_panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.body .toggle_panel img {
+  height: 48px;
+}
+.body .toggle_left {
+  transform: translateX(-200%);
+}
+.body .container.active .toggle_left {
+  transform: translateX(0);
+}
+.body .toggle_right {
+  transform: translateX(0);
+}
+.body .toggle_right button {
+  margin-bottom: 20px;
+}
+.body .container.active .toggle_right {
+  transform: translateX(200%);
+}
+.body .toggle_panel img {
+  margin-bottom: 32px;
+}
+.body .toggle button {
+  background-color: #f2f6fc;
+  color: #496ac1;
+  min-height: 48px;
+  border-radius: 8px;
+  line-height: 24px;
+  width: 380px;
+  cursor: pointer;
+  font-family: "NotoSansGeorgian";
+  transition: all 0.3s ease-in-out;
+}
+.body .toggle button:hover {
+  background-color: #7795e9;
+  color: #ffffff;
+}
+.body .toggle img {
+  width: 235px;
+}
+.body .container .form_container .agreement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.body .container .form_container .agreement .agreement_checkbox {
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.none {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.password_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background-color: #f2f6fc;
+}
+
+#password1 {
+  position: relative;
+}
+
+.slash {
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  border-radius: 5px;
+  background: #000000;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 51%;
+  left: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  transform-origin: center;
+}
+
+.hidden .slash {
+  opacity: 0;
+}
+
+.eye_icon svg {
+  pointer-events: none;
+}
+
+.auth_eye_icon {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+}
+@media only screen and (max-width: 1024px) {
+  .auth_eye_icon {
+    top: 20px;
+  }
+}
+
+.auth_eye_icon svg {
+  pointer-events: none;
+}
+
+.send_link_container {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .send_link_container {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 84px 24px 137px;
+  }
+}
+.send_link_container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #232B48;
+  margin-bottom: 24px;
+}
+.send_link_container h4 {
+  line-height: 24px;
+  color: #232B48;
+  margin-bottom: 16px;
+}
+.send_link_container #email {
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #232B48;
+}
+.send_link_container button {
+  border-radius: 8px;
+  padding: 12px 32px;
+  background-color: #496ac1;
+  line-height: 24px;
+  color: #ffffff;
+  font-feature-settings: "case" on;
+  transition: 0.3s ease;
+}
+.send_link_container button:hover {
+  background-color: #7795e9;
+}
+
+.successful_registration {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1024px) {
+  .successful_registration {
+    text-align: center;
+  }
+}
+.successful_registration h2 {
+  line-height: 24px;
+  font-weight: 700;
+  color: #232B48;
+}
+.successful_registration button {
+  border-radius: 8px;
+  padding: 12px 32px;
+  background-color: #496AC1;
+  height: 48px;
+  font-feature-settings: "case" on;
+  color: #ffffff;
+}
+@media only screen and (max-width: 1024px) {
+  .successful_registration button {
+    width: 327px;
+  }
+}
+
+.body {
+  background-color: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: auto;
+}
+.body .password_reset_container {
+  display: flex;
+  width: 1180px;
+  max-width: 1180px;
+  height: 100vh;
+  min-height: 700px;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 4px 4px 40px 0 rgba(73, 106, 193, 0.8);
+}
+@media only screen and (max-width: 1024px) {
+  .body .password_reset_container {
+    box-shadow: none;
+    width: 0px;
+  }
+}
+.body .password_reset_container label {
+  line-height: 19.2px;
+  color: #496ac1;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.body .password_reset_container .form_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #F2F6FC;
+}
+@media only screen and (max-width: 1024px) {
+  .body .password_reset_container .form_container {
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+.body .password_reset_container .form_container form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 380px;
+}
+.body .password_reset_container .form_container form .error_message {
+  display: none;
+  margin-top: -8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.body .password_reset_container .form_container form .error_text {
+  color: #e73b37;
+}
+.body .password_reset_container .form_container form input {
+  border: 1px solid #496ac1;
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  outline: none;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+.body .password_reset_container .form_container form input:focus {
+  border: 1px solid #496ac1;
+}
+.body .password_reset_container .form_container form h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #496ac1;
+  margin-bottom: 32px;
+  text-align: center;
+  font-feature-settings: "case" on;
+}
+.body .password_reset_container .form_container form button {
+  width: 380px;
+  min-height: 48px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #496ac1;
+  color: #ffffff;
+  border: none;
+  line-height: 24px;
+  cursor: pointer;
+  font-family: "NotoSansGeorgian";
+}
+@media only screen and (max-width: 1024px) {
+  .body .password_reset_container .form_container form button {
+    width: 327px;
+    margin-bottom: 0px;
+  }
+}
+.body .password_reset_container .form_container form button:hover {
+  background-color: #7795e9;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.body .password_reset_container .form_container form .password {
+  position: relative;
+}
+.body .password_reset_container .form_container form .password img {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+.body .password_reset_container .error_warning {
+  display: none;
+  position: fixed;
+  bottom: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  height: 64px;
+  width: 380px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #FF3232;
+  background-color: #FFDFDF;
+  padding: 12px 16px 12px 32px;
+}
+@media only screen and (max-width: 1024px) {
+  .body .password_reset_container .error_warning {
+    top: 50px;
+    height: 48px;
+    width: 327px;
+  }
+}
+.body .password_reset_container .error_warning .error_warning_img {
+  width: 24px;
+}
+.body .password_reset_container .error_warning button {
+  background-color: inherit;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+.body .password_reset_container .error_warning h3 {
+  font-size: 14px;
+  line-height: 20px;
+  color: #FF3232;
+  text-align: center;
+  width: 167px;
+}
+.body .password_reset_container .error_warning.active {
+  display: flex;
+}
+
+.eye_icon {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+}
+
+.slash {
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  border-radius: 5px;
+  background: black;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 51%;
+  left: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  transform-origin: center;
+}
+
+.hidden .slash {
+  opacity: 0;
+}
+
+.error {
+  border: 2px solid red !important;
+}
+
+.error_icon path {
+  stroke: red !important;
+}
+
+.error_icon .slash {
+  background: red !important;
+}
+
+.eye_icon svg {
+  pointer-events: none;
 }/*# sourceMappingURL=global.css.map */
