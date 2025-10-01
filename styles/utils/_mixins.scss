@@ -52,7 +52,7 @@ $pc-max: $pc - 1;
       @content;
     }
   } @else if $media == pc {
-    @media only screen and (min-width: $pc) {
+    @media only screen and (max-width: $pc) {
       @content;
     }
   } @else if $media == l-tablet {

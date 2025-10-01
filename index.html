@@ -18,6 +18,13 @@
             /></a>
           </div>
 
+          <!-- Burger Menu Button -->
+          <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
           <!-- navigation -->
           <div class="navigation">
             <nav>
@@ -43,128 +50,174 @@
           </div>
         </div>
       </div>
-    </header>
-  
-  <main>
-    <!-- Section 1 - banner image -->
-    <section class="section_1_content">
-      <h2>ქართული ენის ციფრული დამუშავება</h2>
-      <p>
-        გამოცადე ლემატიზატორის შესაძლებლობები რეალურ დროში ან სრული
-        ფუნქციონალის შესამოწმებლად გაიარე ავტორიზაცია.
-      </p>
-      <div class="buttons">
-        <div><a href="#">ავტორიზაცია</a></div>
-        <div><a href="#">გაიგე მეტი</a></div>
-      </div>
-    </section>
 
-    <!-- Opportunities section -->
-    <section class="opportunities_section">
-      <h3>შესაძლებლობები</h3>
+      <!-- Mobile Menu Dropdown -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+          <nav>
+            <ul>
+              <!-- Language Toggle Mobile -->
+              <li class="toggle-language-item">
+                <div class="toggle-language-mobile">
+                  <input
+                    type="checkbox"
+                    id="toggle-button-mobile"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button-mobile" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
+                </div>
+              </li>
 
-      <!-- Blocks -->
-      <div class="blocks">
-        <!-- 1st block -->
-        <div class="block">
-          <div class="image">
-            <img src="./assets/images/png/screenshot.png" alt="block-image" />
+              <!-- Navigation Links -->
+              <li><a href="#">ჩვენ შესახებ</a></li>
+              <li><a href="./pages/terms.html">გამოყენების წესები</a></li>
+              <li>
+                <a href="./pages/confidentalPage.html"
+                  >კონფიდენციალურობის პოლიტიკა</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Authorization/Registration Buttons -->
+          <div class="auth-buttons">
+            <button class="btn-authorization">ავტორიზაცია</button>
+            <button class="btn-registration">რეგისტრაცია</button>
           </div>
-          <h4>ცარიელი სივრცეების გასუფთავება</h4>
-          <p>
-            ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
-            გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
-            ძირეული მნიშვნელობის დასაშლელად.
-          </p>
         </div>
+      </div>    </header>
 
-        <!-- 2nd block -->
-        <div class="block">
-          <div class="image">
-            <img src="./assets/images/png/screenshot.png" alt="block-image" />
-          </div>
-          <h4>თეგებისგან გასუფთავება</h4>
-          <p>
-            ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
-            გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
-            ძირეული მნიშვნელობის დასაშლელად.
-          </p>
+    <main>
+      <!-- Section 1 - banner image -->
+      <section class="section_1_content">
+        <h2>ქართული ენის ციფრული დამუშავება</h2>
+        <p>
+          გამოცადე ლემატიზატორის შესაძლებლობები რეალურ დროში ან სრული
+          ფუნქციონალის შესამოწმებლად გაიარე ავტორიზაცია.
+        </p>
+        <div class="buttons">
+          <div><a href="#">ავტორიზაცია</a></div>
+          <div><a href="#">გაიგე მეტი</a></div>
         </div>
+      </section>
 
-        <!-- 3rd block -->
-        <div class="block">
-          <div class="image">
-            <img src="./assets/images/png/screenshot.png" alt="block-image" />
-          </div>
-          <h4>სიმბოლოების გასუფთავება</h4>
-          <p>
-            ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
-            გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
-            ძირეული მნიშვნელობის დასაშლელად.
-          </p>
-        </div>
+      <!-- Opportunities section -->
+      <section class="opportunities_section">
+        <h3>შესაძლებლობები</h3>
 
-        <!-- 4th block -->
-        <div class="block">
-          <div class="image">
-            <img src="./assets/images/png/screenshot.png" alt="block-image" />
+        <!-- Blocks -->
+        <div class="blocks">
+          <!-- 1st block -->
+          <div class="block">
+            <div class="image">
+              <img src="./assets/images/png/screenshot.png" alt="block-image" />
+            </div>
+            <h4>ცარიელი სივრცეების გასუფთავება</h4>
+            <p>
+              ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
+              გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
+              ძირეული მნიშვნელობის დასაშლელად.
+            </p>
           </div>
-          <h4>სიტყვების სიხშირის განაწილება</h4>
-          <p>
-            ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა
-          </p>
-        </div>
 
-        <!-- 5th block -->
-        <div class="block">
-          <div class="image">
-            <img src="./assets/images/png/screenshot2.png" alt="block-image" />
+          <!-- 2nd block -->
+          <div class="block">
+            <div class="image">
+              <img src="./assets/images/png/screenshot.png" alt="block-image" />
+            </div>
+            <h4>თეგებისგან გასუფთავება</h4>
+            <p>
+              ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
+              გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
+              ძირეული მნიშვნელობის დასაშლელად.
+            </p>
           </div>
-          <h4>ტექსტის ლემატიზაცია</h4>
-          <p>
-            ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
-            გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
-            ძირეული მნიშვნელობის დასაშლელად.
-          </p>
-          <button class="see_more">
-            <a href="#">გაიგე მეტი</a>
-          </button>
-        </div>
 
-        <!-- 6th block -->
-        <div class="block">
-          <div class="image">
-            <img src="./assets/images/png/screenshot2.png" alt="block-image" />
-          </div>
-          <h4>NER თეგირება</h4>
-          <p>
-            ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
-            გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
-            ძირეული მნიშვნელობის დასაშლელად.
-          </p>
-          <button class="see_more">
-            <a href="#">გაიგე მეტი</a>
-          </button>
-        </div>
 
-        <!-- 7th block -->
-        <div class="block">
-          <div class="image">
-            <img src="./assets/images/png/screenshot2.png" alt="block-image" />
+          <!-- 3rd block -->
+          <div class="block">
+            <div class="image">
+              <img src="./assets/images/png/screenshot.png" alt="block-image" />
+            </div>
+            <h4>სიმბოლოების გასუფთავება</h4>
+            <p>
+              ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
+              გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
+              ძირეული მნიშვნელობის დასაშლელად.
+            </p>
           </div>
-          <h4>გრამატიკული სერჩი</h4>
-          <p>
-            ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
-            გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
-            ძირეული მნიშვნელობის დასაშლელად.
-          </p>
-          <button class="see_more">
-            <a href="#">გაიგე მეტი</a>
-          </button>
+          <!-- 4th block -->
+          <div class="block">
+            <div class="image">
+              <img src="./assets/images/png/screenshot.png" alt="block-image" />
+            </div>
+            <h4>სიტყვების სიხშირის განაწილება</h4>
+            <p>ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა</p>
+          </div>
+
+          <!-- 5th block -->
+          <div class="block">
+            <div class="image">
+              <img
+                src="./assets/images/png/screenshot2.png"
+                alt="block-image"
+              />
+            </div>
+            <h4>ტექსტის ლემატიზაცია</h4>
+            <p>
+              ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
+              გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
+              ძირეული მნიშვნელობის დასაშლელად.
+            </p>
+            <div class="see_more">
+              <a href="#">გაიგე მეტი</a>
+            </div>
+          </div>
+
+          <!-- 6th block -->
+          <div class="block">
+            <div class="image">
+              <img
+                src="./assets/images/png/screenshot2.png"
+                alt="block-image"
+              />
+            </div>
+            <h4>NER თეგირება</h4>
+            <p>
+              ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
+              გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
+              ძირეული მნიშვნელობის დასაშლელად.
+            </p>
+            <div class="see_more">
+              <a href="#">გაიგე მეტი</a>
+            </div>
+          </div>
+
+          <!-- 7th block -->
+          <div class="block">
+            <div class="image">
+              <img
+                src="./assets/images/png/screenshot2.png"
+                alt="block-image"
+              />
+            </div>
+            <h4>გრამატიკული სერჩი</h4>
+            <p>
+              ლემატიზაცია არის ტექსტის წინასწარი დამუშავების ტექნიკა, რომელიც
+              გამოიყენება ბუნებრივი ენის დამუშავების (NLP) მოდელებში სიტყვის
+              ძირეული მნიშვნელობის დასაშლელად.
+            </p>
+            <div class="see_more">
+              <a href="#">გაიგე მეტი</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
     <footer>
       <div class="footer-wrapper">
         <div class="privacy">
