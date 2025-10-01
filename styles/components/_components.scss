@@ -301,7 +301,6 @@ body {
                     line-height: 24px;
                     background-color: $auth_btn_color;
                     font-feature-settings: 'case' on;
-                    max-width: 164px;
                     margin: auto;
 
                     @include responsive(l-tablet) {
