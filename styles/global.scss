@@ -1,0 +1,15 @@
+@use "./utils/reset";
+@use "./components/main_container";
+@use "./components/about_page";
+@import "./utils/reset";
+@import "./utils/fonts";
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./components/components";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/enterText";
+@import "./components/nerTagging";
+@import "./components/confidents";
+@import "./components/authorization_registration";
+@import "./components/pssword_reset";

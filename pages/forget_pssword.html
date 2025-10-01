@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forger Password</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+</head>
+
+<body class="body">
+    <div class="container" id="container">
+        <a href="../index.html"><img src="../assets/images/svg/cancel-white.svg" class="cancel_white"
+                id="white_X" /></a>
+
+        <div class="form_container sign_in">
+            <form id="forgetpassword_form" novalidate>
+                <h2>დაგავიწყდა პაროლი?</h2>
+                <label for="forget_password_email_input" id="forget_password_email_label">ელ.ფოსტა *</label>
+                <input type="email" id="forget_password_email_input" name="email" autocomplete="email" />
+                <p class="error_message" id="forget_password_error_message"></p>
+                <button type="submit" id="check">პაროლის აღდგენა</button>
+            </form>
+        </div>
+        <div class="error_warning" id="error_warning">
+            <img src="../assets/images/svg/error.svg" alt="error_warning" class="error_warning_img">
+            <h3>დაფიქსირდა შეცდომა ცადე თავიდან</h3>
+            <button id="error_close"><img src="../assets/images/svg/error_close.svg" alt="error_close"></button>
+        </div>
+
+        <div class="toggle_container">
+            <div class="toggle">
+                <div class="toggle_panel toggle_left"></div>
+                <div class="toggle_panel toggle_right toggle_left">
+                    <img src="../assets/images/svg/logo.svg" alt="logo">
+                    <a href="authorization_registration.html"><button class="toggle_btn"
+                            id="register">ავტორიზაცია</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/forget_password.js"></script>
+</body>
+
+</html>

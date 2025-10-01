@@ -1,0 +1,44 @@
+footer {
+  background-color: $header-bg-color;
+  padding: 40px 50px;
+  font-family: "NotoSansGeorgian", sans-serif;
+
+  .footer-wrapper {
+    @include container();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .privacy {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      a {
+        line-height: 24px;
+        color: $text-color-02;
+      }
+    }
+
+    .logo-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      a {
+        width: 100%;
+
+        .unilab {
+          width: 57px;
+          height: 76px;
+        }
+
+        .iliauni {
+          width: 75px;
+          height: 76px;
+        }
+      }
+    }
+  }
+}
