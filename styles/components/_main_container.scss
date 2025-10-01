@@ -8,15 +8,16 @@ main {
 }
 
 .main_container {
+  width: 100%;
   max-width: 1440px;
-  padding: 0 16px;
-  @include responsive(small) {
-    padding: 0 calc((47 - 16) / (834 - 430) * (100vw - 430px) + 16px);
-  }
-  @include responsive(medium) {
-    padding: 0 calc((128 - 47) / (1440 - 834) * (100vw - 834px) + 47px);
-  }
-  @include responsive(larger) {
+  padding: 0 128px;
+  @include responsive(pc) {
     padding: 0 128px;
+  }
+  @include responsive(tablet) {
+    padding: 0 calc((128 - 47) / (1260 - 720) * (100vw - 720px) + 47px);
+  }
+  @include responsive(phone) {
+    padding: 0 calc((47 - 16) / (720 - 375) * (100vw - 375px) + 16px);
   }
 }
