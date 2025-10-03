@@ -1,38 +1,6 @@
 // Safe execution with error handling
 document.addEventListener('DOMContentLoaded', function() {
     
-    // About page functionality (only if elements exist)
-    const articlesBox = document.querySelector(".articles_box");
-    if (articlesBox) {
-        fetch("../db/worked_project.json")
-            .then((response) => response.json())
-            .then((data) => {
-                data.forEach((element) => {
-                    const onProjectArticle = document.createElement("article");
-                    onProjectArticle.classList.add("on_project_article");
-                    const articleTitle = document.createElement("h3");
-                    articleTitle.classList.add("article_title");
-                    articleTitle.textContent = element.name;
-                    const articleSubTitle = document.createElement("h4");
-                    articleSubTitle.classList.add("article_subtitle");
-                    articleSubTitle.textContent = element.position;
-                    const articleIcon = document.createElement("aside");
-                    articleIcon.classList.add("article_icon");
-                    element.media.forEach((urll) => {
-                        const img = document.createElement("img");
-                        img.src = urll;
-                        img.alt = element.name;
-                        articleIcon.appendChild(img);
-                    });
-                    onProjectArticle.appendChild(articleTitle);
-                    onProjectArticle.appendChild(articleSubTitle);
-                    onProjectArticle.appendChild(articleIcon);
-                    articlesBox.appendChild(onProjectArticle);
-                });
-            })
-            .catch(error => console.error('Error loading project data:', error));
-    }
-
     // Text area functionality (only if elements exist)
     const textArea = document.querySelector("#text_input");
     const wordCount = document.querySelector("#word_count");
@@ -54,6 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Form validation with preventDefault
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Form submitted');
+        });
+    });
 
     // Burger Menu Functionality
     console.log('DOM loaded - initializing burger menu');
@@ -86,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Reset body styles - აბრუნებს body-ს default მდგომარეობაში
+    function resetBodyStyles() {
+        body.style.overflow = '';      // აბრუნებს scroll-ს
+        body.style.height = '';         // აშორებს fixed height-ს
+        body.style.position = '';       // აშორებს fixed position-ს
+        body.style.width = '';          // აშორებს fixed width-ს
+        html.style.overflow = '';       // აბრუნებს html scroll-ს
+    }
+
     // Initial check
     handleFooterVisibility();
 
@@ -107,37 +93,17 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Prevent scrolling when menu is open
         if (mobileMenu.classList.contains('active')) {
+            // მენიუ ღიაა - ვკეტავთ scroll-ს
             body.style.overflow = 'hidden';
             body.style.height = '100vh';
             body.style.position = 'fixed';
             body.style.width = '100%';
             html.style.overflow = 'hidden';
         } else {
-            body.style.overflow = '';
-            body.style.height = '';
-            body.style.position = '';
-            body.style.width = '';
-            html.style.overflow = '';
+            // მენიუ დახურულია - ვაბრუნებთ scroll-ს
+            resetBodyStyles();
         }
     });
-
-    // Handle auth buttons
-    const authBtn = document.querySelector('.btn-authorization');
-    const regBtn = document.querySelector('.btn-registration');
-    
-    if (authBtn) {
-        authBtn.addEventListener('click', function() {
-            console.log('Auth button clicked');
-            window.location.href = 'pages/authorization.html';
-        });
-    }
-    
-    if (regBtn) {
-        regBtn.addEventListener('click', function() {
-            console.log('Registration button clicked');
-            window.location.href = 'pages/registration.html';
-        });
-    }
 
     // Close menu when clicking a link
     const navLinks = document.querySelectorAll('.mobile-menu a');
@@ -149,11 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             burgerMenu.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
-            body.style.overflow = '';
-            body.style.height = '';
-            body.style.position = '';
-            body.style.width = '';
-            html.style.overflow = '';
+            resetBodyStyles();
         });
     });
 
@@ -165,11 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             burgerMenu.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
-            body.style.overflow = '';
-            body.style.height = '';
-            body.style.position = '';
-            body.style.width = '';
-            html.style.overflow = '';
+            resetBodyStyles();
         }
     });
 
@@ -180,11 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
             burgerMenu.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
-            body.style.overflow = '';
-            body.style.height = '';
-            body.style.position = '';
-            body.style.width = '';
-            html.style.overflow = '';
+            resetBodyStyles();
         }
     });
 

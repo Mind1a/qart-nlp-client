@@ -1037,22 +1037,23 @@ body header .mobile-menu .mobile-menu-container nav ul li.toggle-language-item .
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #496ac1;
+  background-color: #e2eaf7;
   border-radius: 16px;
   position: relative;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease, color 0.2s ease, border-radius 0s;
 }
 body header .mobile-menu .mobile-menu-container nav ul li.toggle-language-item .toggle-language-mobile .toggle-label::before {
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
+  background-color: #496ac1;
   border-radius: 100px;
   top: 4px;
   left: 4px;
-  transition: transform 0.3s;
+  will-change: transform;
+  transition: transform 0.3s ease;
 }
 body header .mobile-menu .mobile-menu-container nav ul li.toggle-language-item .toggle-language-mobile .toggle-label .toggle-label-on,
 body header .mobile-menu .mobile-menu-container nav ul li.toggle-language-item .toggle-language-mobile .toggle-label .toggle-label-off {
@@ -1061,9 +1062,8 @@ body header .mobile-menu .mobile-menu-container nav ul li.toggle-language-item .
   width: 100%;
   text-align: center;
   line-height: 28px;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
+  color: #496ac1;
+  font-weight: 500;
 }
 body header .mobile-menu .mobile-menu-container nav ul li.toggle-language-item .toggle-language-mobile .toggle-label .toggle-label-on {
   left: -12px;
@@ -1078,18 +1078,20 @@ body header .mobile-menu .mobile-menu-container .auth-buttons {
   padding-bottom: 64px;
   flex-shrink: 0;
 }
-body header .mobile-menu .mobile-menu-container .auth-buttons button {
+body header .mobile-menu .mobile-menu-container .auth-buttons a {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  padding: 16px;
-  border-radius: 12px;
+  padding: 12px;
+  border-radius: 8px;
   font-family: "NotoSansGeorgian", sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
 }
-body header .mobile-menu .mobile-menu-container .auth-buttons button:focus {
+body header .mobile-menu .mobile-menu-container .auth-buttons a:focus {
   outline: 2px solid #496ac1;
   outline-offset: 2px;
 }
@@ -1098,7 +1100,7 @@ body header .mobile-menu .mobile-menu-container .auth-buttons .btn-authorization
   color: #ffffff;
 }
 body header .mobile-menu .mobile-menu-container .auth-buttons .btn-authorization:hover, body header .mobile-menu .mobile-menu-container .auth-buttons .btn-authorization:active {
-  background-color: rgb(61.1106557377, 93.637295082, 179.3893442623);
+  background-color: rgb(62.406557377, 95.6229508197, 183.193442623);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(73, 106, 193, 0.3);
 }
