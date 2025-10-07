@@ -8,7 +8,7 @@ header {
 
   .header_wrapper {
     background-color: $header-bg-color;
-    padding: 43px 50px;
+    padding: 43px 0;
     position: relative;
     z-index: 1000;
 
@@ -17,6 +17,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1184px;
 
       .logo {
         img {

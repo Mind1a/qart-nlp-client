@@ -3,23 +3,24 @@
 
 .how_works_section {
   font-family: "NotoSansGeorgian";
-  color: $text_color;
+  color: $send_link_txt;
+  margin-top: 94px;
   .how_works_card {
     .card_title {
-      font-size: 32px;
+      font-size: 40px; // swapped from 32px
       font-weight: 700;
       line-height: 120%;
-      margin-bottom: 24px;
+      margin-bottom: 48px; // swapped from 24px
       text-align: center;
     }
     .paragraphs_box {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 32px; // swapped from 24px
     }
     .card_text {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 16px; // swapped from 14px
+      line-height: 24px; // swapped from 20px
       text-align: center;
     }
   }
@@ -27,16 +28,16 @@
     padding: 0 20px;
     margin-top: 48px;
     .card_title {
-      font-size: 24px;
+      font-size: 32px; // swapped from 24px
       font-weight: 700;
       line-height: 120%;
       text-align: center;
     }
     .articles_box {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr); // swapped from 1
       gap: 32px;
-      margin-top: 24px;
+      margin-top: 48px; // swapped from 24px
       .on_project_article {
         display: flex;
         flex-direction: column;
@@ -65,45 +66,45 @@
     }
   }
 }
+
 .forms_section {
-  color: $text_color;
-  margin-top: 64px;
-  margin-bottom: 64px;
+  color: $send_link_txt;
+  margin-top: 94px; // swapped from 64px
+  margin-bottom: 264px; // swapped from 64px
   .forms_title_section {
     display: flex;
     flex-direction: column;
     align-items: center;
     .section_title {
-      font-size: 24px;
+      font-size: 32px; // swapped from 24px
       font-weight: 700;
       line-height: 130%;
     }
     .telephone_number {
       margin-top: 7px;
-      color: $text_color;
+      color: $send_link_txt;
       font-weight: 350;
-      font-size: 16px;
+      font-size: 18px; // swapped from 16px
     }
     .forms_address {
-      margin-top: 24px;
-      font-size: 16px;
+      margin-top: 48px; // swapped from 24px
+      font-size: 18px; // swapped from 16px
       font-weight: 350;
-
       line-height: 130%;
     }
   }
   .forms_input_section {
-    margin-top: 24px;
+    margin-top: 31px; // swapped from 24px
     form {
       display: grid;
-      grid-template-columns: auto;
+      grid-template-columns: 1fr 1fr; // swapped from auto (1)
       column-gap: 32px;
       row-gap: 32px;
       div {
         display: flex;
         flex-direction: column;
         label {
-          font-size: 14px;
+          font-size: 18px; // swapped from 14px
           margin-bottom: 8px;
         }
         input {
@@ -112,6 +113,7 @@
           height: 44px;
           padding: 0 24px;
           font-size: 16px;
+          background-color: $white;
         }
         textarea {
           border: 1px solid $form_border_color;
@@ -150,53 +152,53 @@
   }
 }
 
-@include responsive(medium) {
+@include responsive(phone) {
   .how_works_section {
     .how_works_card {
       .card_title {
-        font-size: 40px;
-        margin-bottom: 48px;
+        font-size: 32px; // swapped from 40px
+        margin-bottom: 24px; // swapped from 48px
       }
       .paragraphs_box {
-        gap: 32px;
+        gap: 24px; // swapped from 32px
       }
       .card_text {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px; // swapped from 16px
+        line-height: 20px; // swapped from 24px
       }
     }
     .on_project_worked_card {
       .card_title {
-        font-size: 32px;
+        font-size: 24px; // swapped from 32px
       }
       .articles_box {
-        grid-template-columns: repeat(3, 1fr);
-        margin-top: 48px;
+        grid-template-columns: repeat(1, 1fr); // swapped from 3
+        margin-top: 24px; // swapped from 48px
       }
     }
   }
   .forms_section {
-    margin-top: 94px;
-    margin-bottom: 264px;
+    margin-top: 64px; // swapped from 94px
+    margin-bottom: 64px; // swapped from 264px
     .forms_title_section {
       .section_title {
-        font-size: 32px;
+        font-size: 24px; // swapped from 32px
       }
       .telephone_number {
-        font-size: 18px;
+        font-size: 16px; // swapped from 18px
       }
       .forms_address {
-        margin-top: 48px;
-        font-size: 18px;
+        margin-top: 24px; // swapped from 48px
+        font-size: 16px; // swapped from 18px
       }
     }
     .forms_input_section {
-      margin-top: 31px;
+      margin-top: 24px; // swapped from 31px
       form {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto; // swapped from 1fr 1fr
         div {
           label {
-            font-size: 18px;
+            font-size: 14px; // swapped from 18px
             margin-bottom: 8px;
           }
           input {

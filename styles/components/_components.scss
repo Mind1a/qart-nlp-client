@@ -325,3 +325,13 @@ body {
     }
   }
 }
+.body-locked {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+.html-locked {
+  overflow: hidden;
+}

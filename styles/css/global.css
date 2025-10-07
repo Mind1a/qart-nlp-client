@@ -185,23 +185,24 @@ main {
 
 .how_works_section {
   font-family: "NotoSansGeorgian";
-  color: #e6e6e6;
+  color: #232b48;
+  margin-top: 94px;
 }
 .how_works_section .how_works_card .card_title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 120%;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   text-align: center;
 }
 .how_works_section .how_works_card .paragraphs_box {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 .how_works_section .how_works_card .card_text {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
 }
 .how_works_section .on_project_worked_card {
@@ -209,16 +210,16 @@ main {
   margin-top: 48px;
 }
 .how_works_section .on_project_worked_card .card_title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 120%;
   text-align: center;
 }
 .how_works_section .on_project_worked_card .articles_box {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin-top: 24px;
+  margin-top: 48px;
 }
 .how_works_section .on_project_worked_card .articles_box .on_project_article {
   display: flex;
@@ -247,9 +248,9 @@ main {
 }
 
 .forms_section {
-  color: #e6e6e6;
-  margin-top: 64px;
-  margin-bottom: 64px;
+  color: #232b48;
+  margin-top: 94px;
+  margin-bottom: 264px;
 }
 .forms_section .forms_title_section {
   display: flex;
@@ -257,28 +258,28 @@ main {
   align-items: center;
 }
 .forms_section .forms_title_section .section_title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 130%;
 }
 .forms_section .forms_title_section .telephone_number {
   margin-top: 7px;
-  color: #e6e6e6;
+  color: #232b48;
   font-weight: 350;
-  font-size: 16px;
+  font-size: 18px;
 }
 .forms_section .forms_title_section .forms_address {
-  margin-top: 24px;
-  font-size: 16px;
+  margin-top: 48px;
+  font-size: 18px;
   font-weight: 350;
   line-height: 130%;
 }
 .forms_section .forms_input_section {
-  margin-top: 24px;
+  margin-top: 31px;
 }
 .forms_section .forms_input_section form {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1fr;
   -moz-column-gap: 32px;
        column-gap: 32px;
   row-gap: 32px;
@@ -288,7 +289,7 @@ main {
   flex-direction: column;
 }
 .forms_section .forms_input_section form div label {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 8px;
 }
 .forms_section .forms_input_section form div input {
@@ -297,6 +298,7 @@ main {
   height: 44px;
   padding: 0 24px;
   font-size: 16px;
+  background-color: #ffffff;
 }
 .forms_section .forms_input_section form div textarea {
   border: 1px solid #496ac1;
@@ -334,6 +336,56 @@ main {
   color: white;
 }
 
+@media only screen and (max-width: 719px) {
+  .how_works_section .how_works_card .card_title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .how_works_section .how_works_card .paragraphs_box {
+    gap: 24px;
+  }
+  .how_works_section .how_works_card .card_text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .how_works_section .on_project_worked_card .card_title {
+    font-size: 24px;
+  }
+  .how_works_section .on_project_worked_card .articles_box {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 24px;
+  }
+  .forms_section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  .forms_section .forms_title_section .section_title {
+    font-size: 24px;
+  }
+  .forms_section .forms_title_section .telephone_number {
+    font-size: 16px;
+  }
+  .forms_section .forms_title_section .forms_address {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+  .forms_section .forms_input_section {
+    margin-top: 24px;
+  }
+  .forms_section .forms_input_section form {
+    grid-template-columns: auto;
+  }
+  .forms_section .forms_input_section form div label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .forms_section .forms_input_section form div input {
+    font-size: 16px;
+  }
+  .forms_section .forms_input_section form div textarea {
+    font-size: 16px;
+  }
+}
 *,
 *::before,
 *::after {
@@ -811,6 +863,17 @@ body .opportunities_section .blocks .block .see_more:hover a {
   color: #f2f6fc;
 }
 
+.body-locked {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+.html-locked {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "NotoSansGeorgian";
   src: url("../../assets/fonts/NotoSansGeorgian-Regular.ttf") format("truetype");
@@ -824,7 +887,7 @@ header {
 }
 header .header_wrapper {
   background-color: #496ac1;
-  padding: 43px 50px;
+  padding: 43px 0;
   position: relative;
   z-index: 1000;
 }
@@ -838,6 +901,7 @@ header .header_wrapper .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1184px;
 }
 header .header_wrapper .container .logo img {
   display: block;
@@ -1207,6 +1271,7 @@ footer .footer-wrapper .logo-wrapper a .iliauni {
 
 main {
   flex: 1;
+  padding: 0 20px;
 }
 main .container {
   margin-bottom: 94px;
@@ -1493,7 +1558,7 @@ main .search-results article div {
 }
 .ner_tagging_section .text_container > p {
   font-size: 16px;
-  color: #e6e6e6;
+  color: #232b48;
   line-height: 24px;
   letter-spacing: 0%;
 }
@@ -1559,7 +1624,7 @@ main .search-results article div {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   header .header_wrapper .container .logo {
     margin-left: 0;
@@ -2078,6 +2143,8 @@ input {
 
 .send_link_container {
   display: flex;
+  flex-grow: 1;
+  margin: 0 auto;
   gap: 64px;
   align-items: center;
 }
@@ -2119,10 +2186,12 @@ input {
 }
 
 .successful_registration {
+  margin-top: 120px;
   display: flex;
   gap: 48px;
   align-items: center;
   flex-direction: column;
+  flex-grow: 1;
 }
 @media only screen and (max-width: 1024px) {
   .successful_registration {
@@ -2137,7 +2206,7 @@ input {
 .successful_registration button {
   border-radius: 8px;
   padding: 12px 32px;
-  background-color: #496AC1;
+  background-color: #496ac1;
   height: 48px;
   font-feature-settings: "case" on;
   color: #ffffff;
@@ -2166,6 +2235,16 @@ input {
   position: relative;
   box-shadow: 4px 4px 40px 0 rgba(73, 106, 193, 0.8);
 }
+.body .password_reset_container .close_reset {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 5;
+}
+.body .password_reset_container .close_reset img {
+  height: 20px;
+  width: 20px;
+}
 @media only screen and (max-width: 1024px) {
   .body .password_reset_container {
     box-shadow: none;
@@ -2183,7 +2262,7 @@ input {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #F2F6FC;
+  background-color: #f2f6fc;
 }
 @media only screen and (max-width: 1024px) {
   .body .password_reset_container .form_container {
@@ -2272,8 +2351,8 @@ input {
   border-radius: 8px;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #FF3232;
-  background-color: #FFDFDF;
+  border: 1px solid #ff3232;
+  background-color: #ffdfdf;
   padding: 12px 16px 12px 32px;
 }
 @media only screen and (max-width: 1024px) {
@@ -2295,7 +2374,7 @@ input {
 .body .password_reset_container .error_warning h3 {
   font-size: 14px;
   line-height: 20px;
-  color: #FF3232;
+  color: #ff3232;
   text-align: center;
   width: 167px;
 }
