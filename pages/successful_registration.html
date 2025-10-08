@@ -1,18 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Successful Registration</title>
     <link rel="stylesheet" href="../styles/css/global.css" />
-</head>
+  </head>
 
-<body class="body">
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="container">
+          <!-- logo -->
+          <div class="logo">
+            <a href="../index.html"
+              ><img src="../assets/images/svg/logo.svg" alt="logo"
+            /></a>
+          </div>
+
+          <!-- Burger Menu Button -->
+          <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- navigation -->
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li><a href="#">ჩვენ შესახებ</a></li>
+                <li>
+                  <a href="./authorization_registration.html">ავტორიზაცია</a>
+                </li>
+
+                <!-- Toggle language button -->
+                <div class="toggle-language">
+                  <input
+                    type="checkbox"
+                    id="toggle-button"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+          <nav>
+            <ul>
+              <!-- Language Toggle Mobile -->
+              <li class="toggle-language-item">
+                <div class="toggle-language-mobile">
+                  <input
+                    type="checkbox"
+                    id="toggle-button-mobile"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button-mobile" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
+                </div>
+              </li>
+
+              <!-- Navigation Links -->
+              <li><a href="#">ჩვენ შესახებ</a></li>
+              <li><a href="./pages/terms.html">გამოყენების წესები</a></li>
+              <li>
+                <a href="./pages/confidentalPage.html"
+                  >კონფიდენციალურობის პოლიტიკა</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Authorization/Registration Buttons -->
+          <div class="auth-buttons">
+            <button class="btn-authorization">ავტორიზაცია</button>
+            <button class="btn-registration">რეგისტრაცია</button>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="successful_registration">
-        <h2>თქვენ წარმატებით გაიარეთ რეგისტრაცია!</h2>
-        <a href="authorization_registration.html"><button type="button">ავტორიზაცია</button></a>
+      <h2>თქვენ წარმატებით გაიარეთ რეგისტრაცია!</h2>
+      <a href="authorization_registration.html"
+        ><button type="button">ავტორიზაცია</button></a
+      >
     </div>
-</body>
-
+    <footer>
+      <div class="footer-wrapper">
+        <div class="privacy">
+          <a href="./confidentalPage.html">კონფიდენციალურობის პოლიტიკა</a>
+          <a href="./terms.html">გამოყენების წესები</a>
+        </div>
+        <div class="logo-wrapper">
+          <a href="https://unilab.iliauni.edu.ge/">
+            <img
+              class="unilab"
+              src="../assets/images/svg/logo_unilab.svg"
+              alt="unilab logo"
+            />
+          </a>
+          <a href="https://iliauni.edu.ge/">
+            <img
+              class="iliauni"
+              src="../assets/images/svg/logo_iliauni.svg"
+              alt="iliauni logo"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

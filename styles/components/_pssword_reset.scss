@@ -1,211 +1,221 @@
 .body {
-    background-color: $body-bg-color;
+  background-color: $body-bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: auto;
+
+  .password_reset_container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    height: auto;
-
-    .password_reset_container {
-        display: flex;
-        width: 1180px;
-        max-width: 1180px;
-        height: 100vh;
-        min-height: 700px;
-        background-color: $text_color_02;
-        position: relative;
-        box-shadow: 4px 4px 40px 0 rgba(73, 106, 193, 0.8);
-
-        @include responsive(l-tablet) {
-            box-shadow: none;
-            width: 0px;
-        }
-
-        label {
-            line-height: 19.2px;
-            color: $form_border_color;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .form_container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            background-color: #F2F6FC;
-
-            @include responsive(l-tablet) {
-                position: static;
-                margin: 0 auto;
-                width: 100%;
-            }
-
-            form {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                max-width: 380px;
-
-                .error_message {
-                    display: none;
-                    margin-top: -8px;
-                    margin-bottom: 20px;
-                    font-size: 14px;
-                }
-
-                .error_text {
-                    color: $error-color;
-                }
-
-                input {
-                    border: 1px solid $header-bg-color;
-                    width: 100%;
-                    height: 44px;
-                    border-radius: 8px;
-                    outline: none;
-                    padding: 8px 16px;
-                    margin-bottom: 16px;
-                }
-
-                input:focus {
-                    border: 1px solid $header-bg-color;
-                }
-
-                h2 {
-                    font-size: 24px;
-                    line-height: 32px;
-                    font-weight: 500;
-                    color: $header-bg-color;
-                    margin-bottom: 32px;
-                    text-align: center;
-                    font-feature-settings: 'case' on;
-                }
-
-                button {
-                    width: 380px;
-                    min-height: 48px;
-                    border-radius: 8px;
-                    margin-bottom: 20px;
-                    background-color: $header-bg-color;
-                    color: $text_color_02;
-                    border: none;
-                    line-height: 24px;
-                    cursor: pointer;
-                    font-family: "NotoSansGeorgian";
-
-                    @include responsive(l-tablet) {
-                        width: 327px;
-                        margin-bottom: 0px;
-                    }
-                }
-
-                button:hover {
-                    background-color: #7795e9;
-                    color: white;
-                    transition: all 0.3s ease-in-out;
-                }
-
-                .password {
-                    position: relative;
-
-                    img {
-                        position: absolute;
-                        top: 12px;
-                        right: 12px;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-
-        .error_warning {
-            display: none;
-            position: fixed;
-            bottom: 72px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            height: 64px;
-            width: 380px;
-            border-radius: 8px;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid #FF3232;
-            background-color: #FFDFDF;
-            padding: 12px 16px 12px 32px;
-
-            @include responsive(l-tablet) {
-                top: 50px;
-                height: 48px;
-                width: 327px;
-            }
-
-            .error_warning_img {
-                width: 24px;
-            }
-
-            button {
-                background-color: inherit;
-                width: 24px;
-                height: 24px;
-                padding: 0;
-            }
-
-            h3 {
-                font-size: 14px;
-                line-height: 20px;
-                color: #FF3232;
-                text-align: center;
-                width: 167px;
-            }
-        }
-
-        .error_warning.active {
-            display: flex;
-        }
+    width: 1180px;
+    max-width: 1180px;
+    height: 100vh;
+    min-height: 700px;
+    background-color: $text_color_02;
+    position: relative;
+    box-shadow: 4px 4px 40px 0 rgba(73, 106, 193, 0.8);
+    .close_reset {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 5;
+      img {
+        height: 20px;
+        width: 20px;
+      }
     }
+
+    @include responsive(l-tablet) {
+      box-shadow: none;
+      width: 0px;
+    }
+
+    label {
+      line-height: 19.2px;
+      color: $form_border_color;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .form_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: #f2f6fc;
+
+      @include responsive(l-tablet) {
+        position: static;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 380px;
+
+        .error_message {
+          display: none;
+          margin-top: -8px;
+          margin-bottom: 20px;
+          font-size: 14px;
+        }
+
+        .error_text {
+          color: $error-color;
+        }
+
+        input {
+          border: 1px solid $header-bg-color;
+          width: 100%;
+          height: 44px;
+          border-radius: 8px;
+          outline: none;
+          padding: 8px 16px;
+          margin-bottom: 16px;
+        }
+
+        input:focus {
+          border: 1px solid $header-bg-color;
+        }
+
+        h2 {
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: 500;
+          color: $header-bg-color;
+          margin-bottom: 32px;
+          text-align: center;
+          font-feature-settings: "case" on;
+        }
+
+        button {
+          width: 380px;
+          min-height: 48px;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          background-color: $header-bg-color;
+          color: $text_color_02;
+          border: none;
+          line-height: 24px;
+          cursor: pointer;
+          font-family: "NotoSansGeorgian";
+
+          @include responsive(l-tablet) {
+            width: 327px;
+            margin-bottom: 0px;
+          }
+        }
+
+        button:hover {
+          background-color: #7795e9;
+          color: white;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .password {
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .error_warning {
+      display: none;
+      position: fixed;
+      bottom: 72px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      height: 64px;
+      width: 380px;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #ff3232;
+      background-color: #ffdfdf;
+      padding: 12px 16px 12px 32px;
+
+      @include responsive(l-tablet) {
+        top: 50px;
+        height: 48px;
+        width: 327px;
+      }
+
+      .error_warning_img {
+        width: 24px;
+      }
+
+      button {
+        background-color: inherit;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+      }
+
+      h3 {
+        font-size: 14px;
+        line-height: 20px;
+        color: #ff3232;
+        text-align: center;
+        width: 167px;
+      }
+    }
+
+    .error_warning.active {
+      display: flex;
+    }
+  }
 }
 
 .eye_icon {
-    width: 17px;
-    height: 17px;
-    cursor: pointer;
-    position: absolute;
-    right: 12px;
-    top: 14px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 14px;
 }
 
 .slash {
-    position: absolute;
-    width: 16px;
-    height: 1px;
-    border-radius: 5px;
-    background: black;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    top: 51%;
-    left: 50%;
-    opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
-    transform-origin: center;
+  position: absolute;
+  width: 16px;
+  height: 1px;
+  border-radius: 5px;
+  background: black;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 51%;
+  left: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  transform-origin: center;
 }
 
 .hidden .slash {
-    opacity: 0;
+  opacity: 0;
 }
 
 .error {
-    border: 2px solid red !important;
+  border: 2px solid red !important;
 }
 
 .error_icon path {
-    stroke: red !important;
+  stroke: red !important;
 }
 
 .error_icon .slash {
-    background: red !important;
+  background: red !important;
 }
 
 .eye_icon svg {
-    pointer-events: none;
+  pointer-events: none;
 }
