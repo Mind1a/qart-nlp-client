@@ -18,11 +18,18 @@
             /></a>
           </div>
 
+          <!-- Burger Menu Button -->
+          <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
           <!-- navigation -->
           <div class="navigation">
             <nav>
               <ul>
-                <li><a href="./about_page.html">ჩვენ შესახებ</a></li>
+                <li><a href="#">ჩვენ შესახებ</a></li>
                 <li>
                   <a href="./authorization_registration.html">ავტორიზაცია</a>
                 </li>
@@ -42,6 +49,46 @@
                 </div>
               </ul>
             </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+          <nav>
+            <ul>
+              <!-- Language Toggle Mobile -->
+              <li class="toggle-language-item">
+                <div class="toggle-language-mobile">
+                  <input
+                    type="checkbox"
+                    id="toggle-button-mobile"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button-mobile" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
+                </div>
+              </li>
+
+              <!-- Navigation Links -->
+              <li><a href="#">ჩვენ შესახებ</a></li>
+              <li><a href="./pages/terms.html">გამოყენების წესები</a></li>
+              <li>
+                <a href="./pages/confidentalPage.html"
+                  >კონფიდენციალურობის პოლიტიკა</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Authorization/Registration Buttons -->
+          <div class="auth-buttons">
+            <button class="btn-authorization">ავტორიზაცია</button>
+            <button class="btn-registration">რეგისტრაცია</button>
           </div>
         </div>
       </div>
@@ -138,6 +185,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

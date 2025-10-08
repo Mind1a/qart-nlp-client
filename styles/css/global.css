@@ -1376,7 +1376,7 @@ main .hero-section-enterText .label-box {
 main .hero-section-enterText .label-box label {
   font-family: "FiraGO", sans-serif;
   font-size: 14px;
-  color: #e6e6e6;
+  color: #232b48;
   letter-spacing: 0.75px;
 }
 main .hero-section-enterText .label-box .words-Amount-Box {
@@ -1406,7 +1406,7 @@ main .hero-section-enterText details {
 main .hero-section-enterText details > *:not(summary) {
   margin-top: 16px;
   font-size: 16px;
-  color: #e6e6e6;
+  color: #232b48;
   line-height: 24px;
   letter-spacing: 0%;
 }
