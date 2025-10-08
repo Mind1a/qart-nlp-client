@@ -5,19 +5,35 @@
 
 header {
   font-family: "Firago", sans-serif;
+  width: 100%;
+  background-color: $header-bg-color;
+  margin: 0 auto;
+  position: relative;
+  z-index: 9999;
 
   .header_wrapper {
     background-color: $header-bg-color;
-    padding: 43px 0;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
     position: relative;
-    z-index: 1000;
+    z-index: 9999;
+    width: 100%;
+    min-height: 96px;
+    max-width: 1184px;
+
+    @include responsive(tablet) {
+      padding: 0px 20px;
+    }
 
     .container {
-      @include container;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1184px;
+      height: 100%;
 
       .logo {
         img {
@@ -33,7 +49,6 @@ header {
         height: 25px;
         position: relative;
         cursor: pointer;
-        z-index: 1002;
 
         span {
           display: block;
@@ -199,7 +214,6 @@ header {
     background-color: $main_bg;
     transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
     overflow: hidden;
 
     &.active {
@@ -209,7 +223,7 @@ header {
     .mobile-menu-container {
       height: 100vh;
       padding: 0 24px;
-      padding-top: 100px;
+      padding-top: 128px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -416,8 +430,6 @@ header {
 @media only screen and (max-width: 834px) {
   header {
     .header_wrapper {
-      padding: 20px 15px;
-
       .container {
         .burger-menu {
           display: block !important;
