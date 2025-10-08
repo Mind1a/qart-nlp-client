@@ -1,330 +1,340 @@
 body {
-    background-color: $body-bg-color;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: "NotoSansGeorgian";
-
+  background-color: $body-bg-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "NotoSansGeorgian";
+  .home_page_container {
+    margin: 0px 20px;
     .section_1_content {
-        margin: 0 auto;
-        min-height: 538px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        background-image: url("../../assets/images/banner-image.webp");
-        background-size: contain;
+      margin: 0 auto;
+      min-height: 538px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background-image: url("../../assets/images/banner-image.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 94px;
+      max-width: 1184px;
+      width: 100%;
+      // margin-inline: 16px;
+      // max-width: calc(100% - 32px);
+
+      @include responsive(l-tablet) {
+        margin-top: 24px;
+        min-height: 302px;
+        background: linear-gradient(rgba(0, 6, 14, 0.85), rgba(0, 6, 15, 0.6)),
+          url("../../assets/images/banner-image-responsive.jpg");
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        margin-top: 94px;
-        margin-inline: 16px;
-        max-width: calc(100% - 32px);
+        border-radius: 20px;
+      }
+
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 57.6px;
+        color: $text-color;
+        margin-bottom: 48px;
 
         @include responsive(l-tablet) {
-            margin-top: 24px;
-            min-height: 302px;
-            background:
-                linear-gradient(rgba(0, 6, 14, 0.85), rgba(0, 6, 15, 0.6)),
-                url("../../assets/images/banner-image-responsive.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 20px;
+          font-size: 24px;
+          margin-bottom: 16px;
+          line-height: 32px;
+        }
+      }
+
+      p {
+        max-width: 90ch;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        color: $text-color;
+        margin-bottom: 72px;
+
+        @include responsive(l-tablet) {
+          font-size: 12px;
+          margin-bottom: 24px;
+          line-height: 18px;
+          max-width: 374px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        column-gap: 36px;
+
+        @include responsive(l-tablet) {
+          min-height: 104px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
         }
 
-        h2 {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 57.6px;
-            color: $text-color;
-            margin-bottom: 48px;
+        div {
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 48px;
+          min-width: 186px;
+          font-feature-settings: "case" on;
+
+          @include responsive(l-tablet) {
+            min-height: 44px;
+            min-width: 171px;
+          }
+
+          a {
+            font-weight: 400;
+            line-height: 21.76px;
+            transition: color 0.3s ease;
+            padding: 12px 32px;
 
             @include responsive(l-tablet) {
-                font-size: 24px;
-                margin-bottom: 16px;
-                line-height: 32px;
+              font-size: 14px;
             }
+          }
+
+          &:nth-child(1) {
+            background-color: $auth_btn_color;
+
+            a {
+              color: $button-text-color;
+            }
+          }
+
+          &:nth-child(2) {
+            border: 1px solid $more_btn_color;
+
+            a {
+              color: $more_btn_color;
+              padding: 8px 30px;
+            }
+          }
+
+          &:hover {
+            background-color: $header-bg-color;
+            border-color: $header-bg-color;
+
+            a {
+              color: $more_btn_color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .opportunities_section {
+    max-width: 1184px;
+    width: 100%;
+    margin: 94px auto 184px;
+
+    @include responsive(l-tablet) {
+      margin: 48px 0 64px;
+    }
+
+    h3 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 52px;
+      color: $button-text-color;
+      text-align: center;
+      font-feature-settings: "case" on;
+      font-family: "NotoSansGeorgianSemiBold", sans-serif;
+
+      @include responsive(l-tablet) {
+        font-size: 24px;
+      }
+    }
+
+    .blocks {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+
+      @include responsive(l-tablet) {
+        margin: 16px 16px 0 16px;
+      }
+
+      .block {
+        max-width: 576px;
+        width: 100%;
+        max-height: 528px;
+        height: 100%;
+        background-color: $block_bg;
+        border-radius: 16px;
+        gap: 24px;
+        text-align: center;
+        padding: 24px 24px 32px;
+
+        @include responsive(l-tablet) {
+          max-width: 100%;
+          min-height: 390.41px;
+          padding: 16px 16px 20px;
+          gap: 12px;
+        }
+
+        .image {
+          max-width: 528px;
+          width: 100%;
+          max-height: 292px;
+          height: 100%;
+          margin: auto auto 24px;
+
+          @include responsive(l-tablet) {
+            max-width: 366px;
+            max-height: 202.4px;
+            margin-bottom: 12px;
+          }
+
+          img {
+            max-width: 528px;
+            width: 100%;
+            max-height: 292px;
+            height: 100%;
+
+            @include responsive(l-tablet) {
+              max-width: 366px;
+              max-height: 202.4px;
+            }
+          }
+        }
+
+        h4 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          color: $button-text-color;
+          padding: 8px;
+          font-feature-settings: "case" on;
+
+          @include responsive(l-tablet) {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 0px;
+          }
         }
 
         p {
-            max-width: 90ch;
-            font-size: 20px;
-            line-height: 30px;
-            font-weight: 400;
-            color: $text-color;
-            margin-bottom: 72px;
+          line-height: 24px;
+          color: $button-text-color;
+          max-width: 408px;
+          margin: 12px auto 17px;
+          min-height: 96px;
+          display: flex;
+          align-items: center;
 
-            @include responsive(l-tablet) {
-                font-size: 12px;
-                margin-bottom: 24px;
-                line-height: 18px;
-                max-width: 374px;
-            }
+          @include responsive(l-tablet) {
+            font-size: 12px;
+            line-height: 18px;
+          }
         }
 
-        .buttons {
-            display: flex;
-            column-gap: 36px;
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7) {
+          max-width: 1184px;
+          width: 100%;
+          max-height: 798px;
+          height: 100%;
+          height: auto;
+          padding: 24px;
+
+          @include responsive(l-tablet) {
+            max-width: 100%;
+            min-height: 390.41px;
+            padding: 16px 16px 20px;
+            gap: 12px;
+          }
+
+          .image {
+            max-width: 1136px;
+            width: 100%;
+            max-height: 554px;
+            height: 100%;
+            margin-bottom: 32px;
 
             @include responsive(l-tablet) {
-                min-height: 104px;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
+              max-width: 366px;
+              max-height: 202.4px;
+              margin-bottom: 12px;
             }
 
-            div {
-                border-radius: 8px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 48px;
-                min-width: 186px;
-                font-feature-settings: 'case' on;
+            img {
+              max-width: 1136px;
+              width: 100%;
+              max-height: 554px;
+              height: 100%;
 
-                @include responsive(l-tablet) {
-                    min-height: 44px;
-                    min-width: 171px;
-                }
-
-                a {
-                    font-weight: 400;
-                    line-height: 21.76px;
-                    transition: color 0.3s ease;
-                    padding: 12px 32px;
-
-                    @include responsive(l-tablet) {
-                        font-size: 14px;
-                    }
-
-                }
-
-                &:nth-child(1) {
-                    background-color: $auth_btn_color;
-
-                    a {
-                        color: $button-text-color;
-                    }
-                }
-
-                &:nth-child(2) {
-                    border: 1px solid $more_btn_color;
-
-                    a {
-                        color: $more_btn_color;
-                        padding: 8px 30px;
-                    }
-                }
-
-                &:hover {
-                    background-color: $header-bg-color;
-                    border-color: $header-bg-color;
-
-                    a {
-                        color: $more_btn_color;
-                    }
-                }
+              @include responsive(l-tablet) {
+                max-width: 100%;
+                height: auto;
+              }
             }
+          }
+
+          p {
+            max-width: 810px;
+            min-height: 48px;
+            margin: 12px auto 24px;
+          }
         }
+
+        .see_more {
+          border: 1px solid $header-bg-color;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          padding: 12px 32px;
+          font-weight: 400;
+          line-height: 24px;
+          background-color: $auth_btn_color;
+          font-feature-settings: "case" on;
+          margin: auto;
+
+          @include responsive(l-tablet) {
+            max-width: 152px;
+          }
+
+          a {
+            color: $header-bg-color;
+
+            @include responsive(l-tablet) {
+              font-size: 14px;
+            }
+          }
+
+          &:hover {
+            background-color: $header-bg-color;
+
+            a {
+              color: $more_btn_color;
+            }
+          }
+        }
+      }
     }
+  }
+}
+.body-locked {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
 
-    .opportunities_section {
-        max-width: 1184px;
-        width: 100%;
-        margin: 94px auto 184px;
-
-        @include responsive(l-tablet) {
-            margin: 48px 0 64px;
-        }
-
-        h3 {
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 52px;
-            color: $button-text-color;
-            text-align: center;
-            font-feature-settings: 'case' on;
-            font-family: "NotoSansGeorgianSemiBold", sans-serif;
-
-            @include responsive(l-tablet) {
-                font-size: 24px;
-            }
-        }
-
-        .blocks {
-            margin-top: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 32px;
-
-            @include responsive(l-tablet) {
-                margin: 16px 16px 0 16px;
-
-            }
-
-            .block {
-                max-width: 576px;
-                width: 100%;
-                max-height: 528px;
-                height: 100%;
-                background-color: $block_bg;
-                border-radius: 16px;
-                gap: 24px;
-                text-align: center;
-                padding: 24px 24px 32px;
-
-                @include responsive(l-tablet) {
-                    max-width: 100%;
-                    min-height: 390.41px;
-                    padding: 16px 16px 20px;
-                    gap: 12px;
-                }
-
-                .image {
-                    max-width: 528px;
-                    width: 100%;
-                    max-height: 292px;
-                    height: 100%;
-                    margin: auto auto 24px;
-
-                    @include responsive(l-tablet) {
-                        max-width: 366px;
-                        max-height: 202.40px;
-                        margin-bottom: 12px;
-                    }
-
-                    img {
-                        max-width: 528px;
-                        width: 100%;
-                        max-height: 292px;
-                        height: 100%;
-
-                        @include responsive(l-tablet) {
-                            max-width: 366px;
-                            max-height: 202.40px;
-                        }
-                    }
-                }
-
-                h4 {
-                    font-size: 24px;
-                    font-weight: 700;
-                    line-height: 32px;
-                    color: $button-text-color;
-                    padding: 8px;
-                    font-feature-settings: 'case' on;
-
-                    @include responsive(l-tablet) {
-                        font-size: 16px;
-                        line-height: 24px;
-                        padding: 0px;
-                    }
-                }
-
-                p {
-                    line-height: 24px;
-                    color: $button-text-color;
-                    max-width: 408px;
-                    margin: 12px auto 17px;
-                    min-height: 96px;
-                    display: flex;
-                    align-items: center;
-
-                    @include responsive(l-tablet) {
-                        font-size: 12px;
-                        line-height: 18px;
-                    }
-                }
-
-                &:nth-child(5),
-                &:nth-child(6),
-                &:nth-child(7) {
-                    max-width: 1184px;
-                    width: 100%;
-                    max-height: 798px;
-                    height: 100%;
-                    height: auto;
-                    padding: 24px;
-
-                    @include responsive(l-tablet) {
-                        max-width: 100%;
-                        min-height: 390.41px;
-                        padding: 16px 16px 20px;
-                        gap: 12px;
-                    }
-
-                    .image {
-                        max-width: 1136px;
-                        width: 100%;
-                        max-height: 554px;
-                        height: 100%;
-                        margin-bottom: 32px;
-
-                        @include responsive(l-tablet) {
-                            max-width: 366px;
-                            max-height: 202.40px;
-                            margin-bottom: 12px;
-                        }
-
-                        img {
-                            max-width: 1136px;
-                            width: 100%;
-                            max-height: 554px;
-                            height: 100%;
-
-                            @include responsive(l-tablet) {
-                                max-width: 100%;
-                                height: auto;
-                            }
-                        }
-                    }
-
-                    p {
-                        max-width: 810px;
-                        min-height: 48px;
-                        margin: 12px auto 24px;
-                    }
-                }
-
-                .see_more {
-                    border: 1px solid $header-bg-color;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    padding: 12px 32px;
-                    font-weight: 400;
-                    line-height: 24px;
-                    background-color: $auth_btn_color;
-                    font-feature-settings: 'case' on;
-                    margin: auto;
-
-                    @include responsive(l-tablet) {
-                        max-width: 152px;
-                    }
-
-                    a {
-                        color: $header-bg-color;
-
-                        @include responsive(l-tablet) {
-                            font-size: 14px;
-                        }
-
-                    }
-
-                    &:hover {
-                        background-color: $header-bg-color;
-
-                        a {
-                            color: $more_btn_color;
-                        }
-                    }
-                }
-            }
-        }
-    }
+.html-locked {
+  overflow: hidden;
 }
