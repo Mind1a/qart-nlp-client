@@ -2700,6 +2700,9 @@ input {
 }
 
 .container .userProfile .profile_button--secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background: none;
   border: 1px #000 solid;
 }
