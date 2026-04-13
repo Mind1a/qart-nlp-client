@@ -194,50 +194,6 @@
   color: #ff3232;
 }
 
-/* --- Bottombar --- */
-.container .userProfile .bottombar {
-  height: 92px;
-  width: 100%;
-  padding: 24px 0px;
-  background: #ffffff;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  display: none;
-}
-
-.container .userProfile .bottombar_nav {
-  max-width: 496px;
-  padding: 0px 16px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container .userProfile .bottombar_navItem {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-}
-
-.container .userProfile .bottombar_navItem--active {
-  background-color: #496ac1;
-}
-
-.container .userProfile .bottombar_devider {
-  width: 2px;
-  height: 18px;
-  background: #e2eaf7;
-}
-
-.container .userProfile .botombar_box {
-  display: none;
-}
-
 /* --- PopUp --- */
 .popUp_container {
   display: none;
@@ -312,10 +268,6 @@
     max-width: 464px;
   }
 
-  .container .userProfile .sidebar {
-    display: none;
-  }
-
   .container .userProfile .devider {
     display: none;
   }
@@ -361,17 +313,5 @@
 
   .container .userProfile .profile_actions {
     flex-direction: column;
-  }
-
-  .container .userProfile .bottombar {
-    display: flex;
-    justify-content: center;
-    z-index: 50;
-  }
-
-  .container .userProfile .botombar_box {
-    display: block;
-    height: 92px;
-    width: 100%;
   }
 }
