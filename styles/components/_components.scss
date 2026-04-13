@@ -357,6 +357,10 @@ body {
   transition: width 0.3s ease;
 }
 
+.devider {
+  width: 70px;
+}
+
 .sidebar_label,
 .sidebar_logoText,
 .sidebar_username {
@@ -428,7 +432,7 @@ body {
 }
 
 /* --- Bottombar --- */
-.container .userProfile .bottombar {
+.bottombar {
   height: 92px;
   width: 100%;
   padding: 24px 0px;
@@ -439,7 +443,7 @@ body {
   display: none;
 }
 
-.container .userProfile .bottombar_nav {
+.bottombar_nav {
   max-width: 496px;
   padding: 0px 16px;
   width: 100%;
@@ -448,7 +452,7 @@ body {
   justify-content: space-between;
 }
 
-.container .userProfile .bottombar_navItem {
+.bottombar_navItem {
   width: 44px;
   height: 44px;
   display: flex;
@@ -457,17 +461,17 @@ body {
   border-radius: 8px;
 }
 
-.container .userProfile .bottombar_navItem--active {
+.bottombar_navItem--active {
   background-color: #496ac1;
 }
 
-.container .userProfile .bottombar_devider {
+.bottombar_devider {
   width: 2px;
   height: 18px;
   background: #e2eaf7;
 }
 
-.container .userProfile .botombar_box {
+.botombar_box {
   display: none;
 }
 
@@ -476,15 +480,18 @@ body {
     display: none;
   }
 
-  .container .userProfile .bottombar {
+  .bottombar {
     display: flex;
     justify-content: center;
     z-index: 50;
   }
 
-  .container .userProfile .botombar_box {
+  .botombar_box {
     display: block;
     height: 92px;
     width: 100%;
+  }
+  .devider {
+    display: none;
   }
 }
