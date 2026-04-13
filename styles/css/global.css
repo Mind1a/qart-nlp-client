@@ -865,6 +865,93 @@ body .opportunities_section .blocks .block .see_more:hover a {
   width: 100%;
 }
 
+/* --- Sidebar --- */
+.sidebar {
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #4f6fc7, #4a66b8);
+  width: 70px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  transition: width 0.3s ease;
+}
+
+.sidebar_label,
+.sidebar_logoText,
+.sidebar_username {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.sidebar_divider {
+  height: 1px;
+  background: #a9c4e7;
+  margin: 24px 8px 0px 8px;
+}
+
+.sidebar_header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.sidebar_navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 26.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar_footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+.sidebar_avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: #4f6fc7;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Sidebar Hover States */
+.sidebar:hover {
+  width: 240px;
+}
+
+.sidebar:hover .sidebar_label,
+.sidebar:hover .sidebar_logoText,
+.sidebar:hover .sidebar_username {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar:hover .sidebar_navItem,
+.sidebar:hover .sidebar_header,
+.sidebar:hover .sidebar_footer {
+  justify-content: flex-start;
+}
+
 .html-locked {
   overflow: hidden;
 }
@@ -2450,93 +2537,6 @@ input {
   display: flex;
   gap: 32px;
   position: relative;
-}
-
-/* --- Sidebar --- */
-.container .userProfile .sidebar {
-  z-index: 50;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: linear-gradient(180deg, #4f6fc7, #4a66b8);
-  width: 70px;
-  border-radius: 8px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 12px 0;
-  transition: width 0.3s ease;
-}
-
-.container .userProfile .sidebar_label,
-.container .userProfile .sidebar_logoText,
-.container .userProfile .sidebar_username {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease;
-  white-space: nowrap;
-}
-
-.container .userProfile .sidebar_divider {
-  height: 1px;
-  background: #a9c4e7;
-  margin: 24px 8px 0px 8px;
-}
-
-.container .userProfile .sidebar_header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 20px;
-}
-
-.container .userProfile .sidebar_navItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 20px 26.5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.container .userProfile .sidebar_footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  gap: 10px;
-}
-
-.container .userProfile .sidebar_avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: white;
-  color: #4f6fc7;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-/* Sidebar Hover States */
-.container .userProfile .sidebar:hover {
-  width: 240px;
-}
-
-.container .userProfile .sidebar:hover .sidebar_label,
-.container .userProfile .sidebar:hover .sidebar_logoText,
-.container .userProfile .sidebar:hover .sidebar_username {
-  opacity: 1;
-  visibility: visible;
-}
-
-.container .userProfile .sidebar:hover .sidebar_navItem,
-.container .userProfile .sidebar:hover .sidebar_header,
-.container .userProfile .sidebar:hover .sidebar_footer {
-  justify-content: flex-start;
 }
 
 .container .userProfile .devider {
