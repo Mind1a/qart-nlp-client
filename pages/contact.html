@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contactForm</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+  <body>
+    <div class="contact">
+      <aside class="contact__sidebar">
+        <div class="contact__sidebar-top">
+          <div class="contact__logo">
+            <img src="../assets/images/svg/contacticon.svg" alt="File" />
+          </div>
+
+          <hr />
+
+          <div class="contact__menu">
+            <div class="contact__menu-item">
+              <img src="../assets/images/svg/File.svg" alt="" />
+            </div>
+            <div class="contact__menu-item">
+              <img
+                src="../assets/images/svg/folder.svg"
+                alt="folder"
+                class="folderLogo"
+              />
+            </div>
+            <div class="contact__menu-item active">
+              <img
+                src="../assets/images/svg/interaction.svg"
+                alt="interaction"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="contact__sidebar-bottom">ნ</div>
+      </aside>
+
+      <div class="contact__card">
+        <img src="../assets/images/svg/arrow.svg" alt="arrow" class="arrow" />
+        <h2 class="contact__title">საკონტაქტო ფორმა</h2>
+        <form class="contact__form">
+          <div class="contact__row">
+            <div class="contact__field">
+              <label>სახელი</label>
+              <input type="text" placeholder="სახელი" class="inputName" />
+              <img
+                src="../assets/images/svg/X.svg"
+                alt="x"
+                width="10px"
+                height="10px"
+              />
+            </div>
+
+            <div class="contact__field">
+              <label>გვარი</label>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="contact__field">
+            <label>ელ-ფოსტა</label>
+            <input type="email" />
+            <img
+              src="../assets/images/svg/X.svg"
+              alt="x"
+              width="10px"
+              height="10px"
+            />
+          </div>
+
+          <div class="contact__field">
+            <label>თქვენი შეტყობინება</label>
+            <textarea placeholder="ტექსტი"></textarea>
+          </div>
+
+          <button class="contact__btn">გაგზავნა</button>
+        </form>
+      </div>
+      <div class="contact__tablet-nav">
+        <button class="contact__mobile-item">
+          <img
+            src="../assets/images/svg/fileResposive.svg"
+            alt="File"
+            class="FileImage"
+          />
+        </button>
+        <div class="vertical-line"></div>
+        <button class="contact__mobile-item">
+          <img src="../assets/images/svg/folderResponsive.svg" alt="folder" />
+        </button>
+        <div class="vertical-line"></div>
+        <button class="contact__mobile-item active">
+          <img
+            src="../assets/images/svg/GroupResponsive.svg"
+            alt="interaction"
+          />
+        </button>
+        <div class="vertical-line"></div>
+        <button class="contact__mobile-item">
+          <img
+            src="../assets/images/svg/Profile.svg"
+            alt="Profile"
+            class="ProfileImage"
+          />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
