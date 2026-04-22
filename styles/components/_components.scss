@@ -343,10 +343,9 @@ body {
 /* --- Sidebar --- */
 .sidebar {
   z-index: 50;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  position: fixed;
+  top: 8px;
+  bottom: 8px;
   background: linear-gradient(180deg, #4f6fc7, #4a66b8);
   width: 70px;
   border-radius: 8px;
