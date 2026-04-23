@@ -1,0 +1,185 @@
+.file-manager {
+  width: 1083px;
+  min-height: 976px;
+  gap: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  padding-top: 24px;
+  position: relative;
+  top: 24px;
+  left: 229px;
+  font-family: "Noto Sans Georgian", sans-serif;
+  background-color: #f0f4f8;
+}
+.file-manager__title {
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: rgba(35, 43, 72, 0.5);
+  margin: 0 0 16px 0;
+  align-self: start;
+  margin-left: 10px;
+}
+.file-manager__search {
+  width: 1083px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #A9C4E7;
+  border-radius: 8px;
+  padding: 0 16px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.file-manager__search-icon {
+  width: 20px;
+  height: 20px;
+  color: rgba(35, 43, 72, 0.5);
+  flex-shrink: 0;
+}
+.file-manager__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #232B48;
+  background: transparent;
+}
+.file-manager__search-input::-moz-placeholder {
+  color: #A9C4E7;
+}
+.file-manager__search-input::placeholder {
+  color: #A9C4E7;
+}
+.file-manager__table-wrapper {
+  width: 1083px;
+  min-height: 852px;
+  background: #ffffff;
+  border: 1px solid #e8ebf2;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.file-manager__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.file-manager__th {
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(35, 43, 72, 0.6);
+  padding: 16px 24px;
+  text-align: left;
+  border-bottom: 1px solid #e8ebf2;
+}
+.file-manager__th--center {
+  text-align: center;
+}
+.file-manager__row {
+  border-bottom: 1px solid #f0f2f7;
+  transition: background-color 0.15s ease;
+}
+.file-manager__row:last-child {
+  border-bottom: none;
+}
+.file-manager__row:hover {
+  background-color: #f8f9fc;
+}
+.file-manager__td {
+  padding: 16px 24px;
+  vertical-align: middle;
+}
+.file-manager__td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.file-manager__td--center {
+  text-align: center;
+}
+.file-manager__file-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: rgba(35, 43, 72, 0.5);
+  flex-shrink: 0;
+}
+.file-manager__file-name {
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #232B48;
+}
+.file-manager__action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  color: rgba(35, 43, 72, 0.45);
+  transition: color 0.15s ease, background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-manager__action-btn:hover {
+  color: #4f5d8a;
+  background-color: #f0f2f7;
+}
+.file-manager__action-btn--delete:hover {
+  color: #d44;
+  background-color: #fef2f2;
+}
+.file-manager__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 20px 0;
+}
+.file-manager__page {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #232B48;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+.file-manager__page:hover:not(.file-manager__page--active):not(.file-manager__page--dots) {
+  background-color: #f0f2f7;
+}
+.file-manager__page--active {
+  background-color: #5b6abf;
+  color: #ffffff;
+  font-weight: 500;
+}
+.file-manager__page--dots {
+  cursor: default;
+  color: rgba(35, 43, 72, 0.4);
+}
+.file-manager__page--next {
+  font-size: 20px;
+  color: rgba(35, 43, 72, 0.5);
+}/*# sourceMappingURL=my_fiels_edit_page.css.map */
