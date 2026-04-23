@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+  <body class="">
+    <div class="container">
+      <div class="userProfile">
+        <!-- Sidebar -->
+        <div class="sidebar sidebar--collapsed">
+          <!-- Header / Logo -->
+          <div class="sidebar_header">
+            <img
+              class="sidebar_logoIcon"
+              src="../assets/images/svg/MiniLogo.svg"
+              alt="QartNLP"
+            />
+            <img
+              class="sidebar_logoText"
+              src="../assets/images/svg/LogoText.svg"
+              alt="QartNLP"
+            />
+          </div>
+
+          <div class="sidebar_divider"></div>
+
+          <!-- Navigation -->
+          <ul class="sidebar_nav">
+            <li class="sidebar_navItem">
+              <img
+                class="sidebar_icon"
+                src="/assets/images/svg/ProfileFileAdd.svg"
+                alt=""
+              />
+              <span class="sidebar_label">ფაილის დამატება</span>
+            </li>
+
+            <li class="sidebar_navItem">
+              <img
+                class="sidebar_icon"
+                src="/assets/images/svg/ProfileFiles.svg"
+                alt=""
+              />
+              <span class="sidebar_label">ჩემი ფაილები</span>
+            </li>
+
+            <li class="sidebar_navItem">
+              <img
+                class="sidebar_icon"
+                src="/assets/images/svg/Support.svg"
+                alt=""
+              />
+              <span class="sidebar_label">კონტაქტი</span>
+            </li>
+          </ul>
+
+          <!-- Footer / Profile -->
+          <div class="sidebar_footer">
+            <div class="sidebar_avatar">ნ</div>
+            <span class="sidebar_username">ნინი გოცირიძე</span>
+          </div>
+        </div>
+        <div class="devider"></div>
+
+        <!-- User Information -->
+        <div class="profile">
+          <div class="profile_header">
+            <h1 class="profile_tablet_title">პროფილი</h1>
+            <h1 class="profile_title">სალამი, ნინი! 👋</h1>
+            <div class="profile_toast" id="toast_error">
+              <img src="../assets/images/svg/error.svg" alt="" />
+              ცვლილებები ვერ შეინახა
+              <img
+                id="toast_error_close"
+                src="../assets/images/svg/error_close.svg"
+                alt=""
+              />
+            </div>
+            <div class="profile_toast" id="toast_success">
+              <img src="../assets/images/svg/success.svg" alt="" /> ცვლილებები
+              შეინახა
+              <img
+                id="toast_success_close"
+                src="../assets/images/svg/successClose.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <form class="profile_form" novalidate id="profile_form">
+            <!-- Profile Information -->
+            <div class="profile_section">
+              <div class="profile_row">
+                <div class="profile_field">
+                  <label class="profile_label" id="name_label">სახელი</label>
+                  <input type="text" id="name" class="profile_input" />
+                  <p class="profile_error_field" id="name_error"></p>
+                </div>
+
+                <div class="profile_field">
+                  <label class="profile_label" id="surname_label">გვარი</label>
+                  <input type="text" id="surname" class="profile_input" />
+                  <p class="profile_error_field" id="surname_error"></p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="profile_field">
+                <label class="profile_label" id="email_label">ელ-ფოსტა</label>
+                <input type="email" id="email" class="profile_input" />
+                <p class="" id="email_error"></p>
+              </div>
+            </div>
+            <!-- Password section -->
+            <div class="profile_section">
+              <h2 class="profile_subtitle">პაროლის შეცვლა</h2>
+
+              <div class="profile_field">
+                <label class="profile_label" id="old_password_label"
+                  >შეიყვანეთ ძველი პაროლი</label
+                >
+                <div class="input_container">
+                  <input
+                    type="password"
+                    id="old_password"
+                    class="profile_input"
+                  />
+
+                  <div id="input_toggle_eye" class="input_toggle_eye">
+                    <svg
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                        stroke="#2C2C2C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                        stroke="#2C2C2C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div class="slash active"></div>
+                  </div>
+                </div>
+                <p class="profile_error_field" id="old_password_error"></p>
+              </div>
+
+              <div class="profile_row">
+                <div class="profile_field">
+                  <label class="profile_label" id="new_password_label"
+                    >შეიყვანეთ ახალი პაროლი</label
+                  >
+                  <div class="input_container">
+                    <input
+                      type="password"
+                      id="new_password"
+                      class="profile_input"
+                    />
+                    <div id="input_toggle_eye" class="input_toggle_eye">
+                      <svg
+                        width="17"
+                        height="17"
+                        viewBox="0 0 17 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                          stroke="#2C2C2C"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                          stroke="#2C2C2C"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <div class="slash active"></div>
+                    </div>
+                  </div>
+                  <p class="profile_error_field" id="new_password_error"></p>
+                </div>
+
+                <div class="profile_field">
+                  <label class="profile_label" id="rewrite_passowrd_label"
+                    >გაიმეორეთ პაროლი</label
+                  >
+                  <div class="input_container">
+                    <input
+                      type="password"
+                      id="rewrite_password"
+                      class="profile_input"
+                    />
+                    <div id="input_toggle_eye" class="input_toggle_eye">
+                      <svg
+                        width="17"
+                        height="17"
+                        viewBox="0 0 17 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16 8.33333C16 8.33333 13.2727 13 8.5 13C3.72727 13 1 8.33333 1 8.33333C1 8.33333 3.72727 4 8.5 4C13.2727 4 16 8.33333 16 8.33333Z"
+                          stroke="#2C2C2C"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.5 11C9.88071 11 11 9.88071 11 8.5C11 7.11929 9.88071 6 8.5 6C7.11929 6 6 7.11929 6 8.5C6 9.88071 7.11929 11 8.5 11Z"
+                          stroke="#2C2C2C"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <div class="slash active"></div>
+                    </div>
+                  </div>
+                  <p
+                    class="profile_error_field"
+                    id="rewrite_password_error"
+                  ></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="profile_actions">
+              <button
+                type="submit"
+                id="save_changes"
+                class="profile_button profile_button--primary"
+              >
+                შენახვა
+              </button>
+
+              <button
+                type="button"
+                class="profile_button profile_button--secondary"
+              >
+                <img src="../assets/images/svg/logout.svg" alt="" />
+                გასვლა
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="botombar_box"></div>
+        <div class="bottombar">
+          <div class="bottombar_nav">
+            <div class="bottombar_navItem">
+              <img src="../assets/images/svg/fileaddbtm.svg" alt="" />
+            </div>
+            <div class="bottombar_devider"></div>
+            <div class="bottombar_navItem">
+              <img src="../assets/images/svg/filebtm.svg" alt="" />
+            </div>
+            <div class="bottombar_devider"></div>
+            <div class="bottombar_navItem">
+              <img src="../assets/images/svg/supportbtm.svg" alt="" />
+            </div>
+            <div class="bottombar_devider"></div>
+            <div class="bottombar_navItem bottombar_navItem--active">
+              <img src="../assets/images/svg/user.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popUp_container" id="popUp_container">
+      <div class="popUp" id="popUp">
+        <div class="popUp_icon_container">
+          <div id="popup_close">
+            <img
+              class="popUp_close_button"
+              src="../assets/images/svg/close.svg"
+              alt="close button"
+            />
+          </div>
+        </div>
+        <div class="popUp_content">
+          <h3 class="popUp_header">ნამდვილად გსურთ ინფორმაციის ცვლილება?</h3>
+          <div class="popUp_actions">
+            <button class="popUp_button popUp_primary_btn" id="popUp_save">
+              შენახვა
+            </button>
+            <button class="popUp_button popUp_secondary_btn" id="popUp_cancel">
+              უკან დაბრუნება
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>
