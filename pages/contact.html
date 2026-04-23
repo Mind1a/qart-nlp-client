@@ -7,106 +7,150 @@
     <link rel="stylesheet" href="../styles/css/global.css" />
   </head>
   <body>
-    <div class="contact">
-      <aside class="contact__sidebar">
-        <div class="contact__sidebar-top">
-          <div class="contact__logo">
-            <img src="../assets/images/svg/contacticon.svg" alt="File" />
-          </div>
-
-          <hr />
-
-          <div class="contact__menu">
-            <div class="contact__menu-item">
-              <img src="../assets/images/svg/File.svg" alt="" />
-            </div>
-            <div class="contact__menu-item">
-              <img
-                src="../assets/images/svg/folder.svg"
-                alt="folder"
-                class="folderLogo"
-              />
-            </div>
-            <div class="contact__menu-item active">
-              <img
-                src="../assets/images/svg/interaction.svg"
-                alt="interaction"
-              />
-            </div>
-          </div>
+    <div class="layout">
+      <div class="sidebar sidebar--collapsed">
+        <div class="sidebar_header">
+          <img
+            class="sidebar_logoIcon"
+            src="../assets/images/svg/MiniLogo.svg"
+            alt="QartNLP"
+          />
+          <img
+            class="sidebar_logoText"
+            src="../assets/images/svg/LogoText.svg"
+            alt="QartNLP"
+          />
         </div>
-        <div class="contact__sidebar-bottom">ნ</div>
-      </aside>
 
-      <div class="contact__card">
-        <img src="../assets/images/svg/arrow.svg" alt="arrow" class="arrow" />
-        <h2 class="contact__title">საკონტაქტო ფორმა</h2>
-        <form class="contact__form">
+        <div class="sidebar_divider"></div>
+
+        <ul class="sidebar_nav">
+          <li class="sidebar_navItem">
+            <img
+              class="sidebar_icon"
+              src="../assets/images/svg/ProfileFileAdd.svg"
+              alt=""
+            />
+            <span class="sidebar_label">ფაილის დამატება</span>
+          </li>
+          <li class="sidebar_navItem">
+            <img
+              class="sidebar_icon"
+              src="../assets/images/svg/ProfileFiles.svg"
+              alt=""
+            />
+            <span class="sidebar_label">ჩემი ფაილები</span>
+          </li>
+          <li class="sidebar_navItem sidebar_navItem--active">
+            <img
+              class="sidebar_icon"
+              src="../assets/images/svg/Support.svg"
+              alt=""
+            />
+            <span class="sidebar_label">კონტაქტი</span>
+          </li>
+        </ul>
+
+        <div class="sidebar_footer">
+          <div class="sidebar_avatar">ნ</div>
+          <span class="sidebar_username">ნინი გოცირიძე</span>
+        </div>
+      </div>
+      <div class="devider"></div>
+
+      <div class="contact">
+        <div class="contact__card">
+          <h2 class="contact__title">საკონტაქტო ფორმა</h2>
+
+          <div class="contact__toast" id="contact_toast_error">
+            <img src="../assets/images/svg/error.svg" alt="" />
+            გთხოვთ შეავსოთ ფორმა სწორად
+          </div>
+          <div class="contact__toast" id="contact_toast_success">
+            <img src="../assets/images/svg/success.svg" alt="" />
+            შეტყობინება წარმატებით გაიგზავნა
+          </div>
+
+          <form class="contact__form" id="contact_form" novalidate>
           <div class="contact__row">
             <div class="contact__field">
-              <label>სახელი</label>
-              <input type="text" placeholder="სახელი" class="inputName" />
+              <label for="contact_name">სახელი</label>
+              <input
+                type="text"
+                id="contact_name"
+                placeholder="სახელი"
+                class="inputName"
+              />
               <img
+                class="contact__error-icon"
+                id="contact_name_icon"
                 src="../assets/images/svg/X.svg"
                 alt="x"
                 width="10px"
                 height="10px"
               />
+              <p class="contact__field-error" id="contact_name_error"></p>
             </div>
 
             <div class="contact__field">
-              <label>გვარი</label>
-              <input type="text" />
+              <label for="contact_surname">გვარი</label>
+              <input type="text" id="contact_surname" />
+              <img
+                class="contact__error-icon"
+                id="contact_surname_icon"
+                src="../assets/images/svg/X.svg"
+                alt="x"
+                width="10px"
+                height="10px"
+              />
+              <p class="contact__field-error" id="contact_surname_error"></p>
             </div>
           </div>
 
           <div class="contact__field">
-            <label>ელ-ფოსტა</label>
-            <input type="email" />
+            <label for="contact_email">ელ-ფოსტა</label>
+            <input type="email" id="contact_email" />
             <img
+              class="contact__error-icon"
+              id="contact_email_icon"
               src="../assets/images/svg/X.svg"
               alt="x"
               width="10px"
               height="10px"
             />
+            <p class="contact__field-error" id="contact_email_error"></p>
           </div>
 
           <div class="contact__field">
-            <label>თქვენი შეტყობინება</label>
-            <textarea placeholder="ტექსტი"></textarea>
+            <label for="contact_message">თქვენი შეტყობინება</label>
+            <textarea id="contact_message" placeholder="ტექსტი"></textarea>
+            <p class="contact__field-error" id="contact_message_error"></p>
           </div>
 
-          <button class="contact__btn">გაგზავნა</button>
+          <button type="submit" class="contact__btn">გაგზავნა</button>
         </form>
       </div>
-      <div class="contact__tablet-nav">
-        <button class="contact__mobile-item">
-          <img
-            src="../assets/images/svg/fileResposive.svg"
-            alt="File"
-            class="FileImage"
-          />
-        </button>
-        <div class="vertical-line"></div>
-        <button class="contact__mobile-item">
-          <img src="../assets/images/svg/folderResponsive.svg" alt="folder" />
-        </button>
-        <div class="vertical-line"></div>
-        <button class="contact__mobile-item active">
-          <img
-            src="../assets/images/svg/GroupResponsive.svg"
-            alt="interaction"
-          />
-        </button>
-        <div class="vertical-line"></div>
-        <button class="contact__mobile-item">
-          <img
-            src="../assets/images/svg/Profile.svg"
-            alt="Profile"
-            class="ProfileImage"
-          />
-        </button>
+      <div class="botombar_box"></div>
+      <div class="bottombar">
+        <div class="bottombar_nav">
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/fileaddbtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/filebtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem bottombar_navItem--active">
+            <img src="../assets/images/svg/supportbtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/user.svg" alt="" />
+          </div>
+        </div>
       </div>
     </div>
+    <script src="../js/contact.js"></script>
   </body>
 </html>

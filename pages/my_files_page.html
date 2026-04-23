@@ -7,146 +7,105 @@
     <link rel="stylesheet" href="../styles/css/global.css" />
   </head>
   <body>
-    <header>
-      <div class="header_wrapper">
-        <div class="container">
-          <!-- logo -->
-          <div class="logo">
-            <a href="../index.html"
-              ><img src="../assets/images/svg/logo.svg" alt="logo"
-            /></a>
-          </div>
-
-          <!-- Burger Menu Button -->
-          <div class="burger-menu" id="burgerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <!-- navigation -->
-          <div class="navigation">
-            <nav>
-              <ul>
-                <li><a href="#">ჩვენ შესახებ</a></li>
-                <li>
-                  <a href="./authorization_registration.html">ავტორიზაცია</a>
-                </li>
-
-                <!-- Toggle language button -->
-                <div class="toggle-language">
-                  <input
-                    type="checkbox"
-                    id="toggle-button"
-                    class="toggle-button"
-                    checked
-                  />
-                  <label for="toggle-button" class="toggle-label">
-                    <span class="toggle-label-on">GE</span>
-                    <span class="toggle-label-off">EN</span>
-                  </label>
-                </div>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Menu Dropdown -->
-      <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-container">
-          <nav>
-            <ul>
-              <!-- Language Toggle Mobile -->
-              <li class="toggle-language-item">
-                <div class="toggle-language-mobile">
-                  <input
-                    type="checkbox"
-                    id="toggle-button-mobile"
-                    class="toggle-button"
-                    checked
-                  />
-                  <label for="toggle-button-mobile" class="toggle-label">
-                    <span class="toggle-label-on">GE</span>
-                    <span class="toggle-label-off">EN</span>
-                  </label>
-                </div>
-              </li>
-
-              <!-- Navigation Links -->
-              <li><a href="#">ჩვენ შესახებ</a></li>
-              <li><a href="./pages/terms.html">გამოყენების წესები</a></li>
-              <li>
-                <a href="./pages/confidentalPage.html"
-                  >კონფიდენციალურობის პოლიტიკა</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Authorization/Registration Buttons -->
-          <div class="auth-buttons">
-            <button class="btn-authorization">ავტორიზაცია</button>
-            <button class="btn-registration">რეგისტრაცია</button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- header -->
-    <!-- main -->
-    <main>
-      <nav>
-        <ul>
-          <li>სახელი</li>
-          <li>რედაქტირება</li>
-          <li>ჩამოტვირთვა</li>
-          <li>წაშლა</li>
-        </ul>
-      </nav>
-      <div>
-        <div>
+    <div class="layout">
+      <div class="sidebar sidebar--collapsed">
+        <div class="sidebar_header">
           <img
-            src=".././assets/images/svg/file-upload-logo.svg"
-            alt="file upload icon svg"
+            class="sidebar_logoIcon"
+            src="../assets/images/svg/MiniLogo.svg"
+            alt="QartNLP"
           />
-          <p>ფაილი ჯერ არ არის ატვირთული</p>
-          <p>ატვირთეთ თქვენი პირველი ფაილი</p>
-          <button>
+          <img
+            class="sidebar_logoText"
+            src="../assets/images/svg/LogoText.svg"
+            alt="QartNLP"
+          />
+        </div>
+
+        <div class="sidebar_divider"></div>
+
+        <ul class="sidebar_nav">
+          <li class="sidebar_navItem">
             <img
-              src=".././assets/images/svg/upload.svg"
-              alt="upload svg icon"
+              class="sidebar_icon"
+              src="../assets/images/svg/ProfileFileAdd.svg"
+              alt=""
             />
+            <span class="sidebar_label">ფაილის დამატება</span>
+          </li>
+          <li class="sidebar_navItem sidebar_navItem--active">
+            <img
+              class="sidebar_icon"
+              src="../assets/images/svg/ProfileFiles.svg"
+              alt=""
+            />
+            <span class="sidebar_label">ჩემი ფაილები</span>
+          </li>
+          <li class="sidebar_navItem">
+            <img
+              class="sidebar_icon"
+              src="../assets/images/svg/Support.svg"
+              alt=""
+            />
+            <span class="sidebar_label">კონტაქტი</span>
+          </li>
+        </ul>
+
+        <div class="sidebar_footer">
+          <div class="sidebar_avatar">ნ</div>
+          <span class="sidebar_username">ნინი გოცირიძე</span>
+        </div>
+      </div>
+      <div class="devider"></div>
+
+      <main class="file-manager file-manager--empty">
+        <p class="file-manager__title">ჩემი ფაილები</p>
+
+        <nav class="file-manager__table-nav">
+          <ul>
+            <li>სახელი</li>
+            <li>რედაქტირება</li>
+            <li>ჩამოტვირთვა</li>
+            <li>წაშლა</li>
+          </ul>
+        </nav>
+
+        <div class="file-manager__empty-state">
+          <img
+            src="../assets/images/svg/file-upload-logo.svg"
+            alt="file upload icon"
+          />
+          <p class="file-manager__empty-title">ფაილი ჯერ არ არის ატვირთული</p>
+          <p class="file-manager__empty-subtitle">
+            ატვირთეთ თქვენი პირველი ფაილი
+          </p>
+          <button class="file-manager__upload-btn">
+            <img src="../assets/images/svg/upload.svg" alt="upload icon" />
             ფაილის ატვირთვა
           </button>
         </div>
-      </div>
-    </main>
-    <!-- main -->
-    <!-- footer -->
-    <footer>
-      <div class="footer-wrapper">
-        <div class="privacy">
-          <a href="./confidentalPage.html">კონფიდენციალურობის პოლიტიკა</a>
-          <a href="./terms.html">გამოყენების წესები</a>
-        </div>
-        <div class="logo-wrapper">
-          <a href="https://unilab.iliauni.edu.ge/">
-            <img
-              class="unilab"
-              src="../assets/images/svg/logo_unilab.svg"
-              alt="unilab logo"
-            />
-          </a>
-          <a href="https://iliauni.edu.ge/">
-            <img
-              class="iliauni"
-              src="../assets/images/svg/logo_iliauni.svg"
-              alt="iliauni logo"
-            />
-          </a>
+      </main>
+
+      <div class="botombar_box"></div>
+      <div class="bottombar">
+        <div class="bottombar_nav">
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/fileaddbtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem bottombar_navItem--active">
+            <img src="../assets/images/svg/filebtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/supportbtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/user.svg" alt="" />
+          </div>
         </div>
       </div>
-    </footer>
-    <script src="../js/script.js"></script>
+    </div>
   </body>
 </html>

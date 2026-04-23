@@ -1,111 +1,82 @@
-body {
-  background-color: #f2f6fc;
-  font-family: "NotoSansGeorgian";
-}
-
 .contact {
+  width: 100%;
   max-width: 1083px;
-  margin: 24px auto 0;
-  display: flex;
-
-  hr {
-    width: 53px;
-    border: 1px solid #a9c4e7;
-    margin: 24px auto 0;
-  }
-
-  &__menu-item {
-    .folderLogo {
-      margin-top: 26px;
-    }
-    img {
-      color: #e2eaf7;
-      cursor: pointer;
-    }
-  }
-
-  &__sidebar {
-    max-width: 69px;
-    min-height: 976px;
-    background-color: #496ac1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 14px 0;
-    border-radius: 8px;
-    margin-right: 32px;
-  }
-
-  &__logo {
-    display: flex;
-    justify-content: center;
-    margin-top: 24px;
-  }
-
-  &__menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 48px;
-    gap: 16px;
-  }
-
-  &__sidebar-bottom {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #ffffff;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 700;
-  }
+  margin: 24px 0 0;
+  padding-top: 24px;
 
   &__card {
-    max-width: 1083px;
-    .arrow {
-      display: none;
-    }
+    width: 100%;
   }
 
   &__title {
     color: #496ac1;
     font-size: 24px;
-    margin-top: 24px;
     font-weight: 700;
     font-feature-settings: "case";
   }
 
+  &__toast {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin-top: 16px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__toast--error {
+    display: inline-flex;
+    background: #ffdfdf;
+    border-color: #ff3232;
+    color: #ff3232;
+  }
+
+  &__toast--success {
+    display: inline-flex;
+    background: #dff9e3;
+    border-color: #32ba48;
+    color: #32ba48;
+  }
+
   &__form {
     margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   &__row {
     display: flex;
     gap: 16px;
-    margin-bottom: 44px;
   }
 
   &__field {
-    margin-top: 36px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 1083px;
+    gap: 8px;
     position: relative;
 
     img {
       position: absolute;
-      right: 6px;
-      top: 60%;
-      margin-right: 24px;
+      right: 16px;
+      top: 44px;
       cursor: pointer;
     }
 
+    .contact__error-icon {
+      display: none;
+    }
+
+    .contact__error-icon--visible {
+      display: block;
+    }
+
     label {
-      margin-bottom: 8px;
       font-size: 16px;
       font-weight: 400;
       color: #232b48;
@@ -113,16 +84,20 @@ body {
 
     input {
       border-radius: 8px;
+      border: 1px solid #a9c4e7;
+      height: 44px;
       padding: 13px 40px 13px 16px;
       background-color: #ffffff;
       font-size: 16px;
-      font-weight: 400;
       color: #232b48;
+    }
+
+    .contact__input--error {
+      border-color: #ff3232;
     }
 
     textarea {
       height: 393px;
-      max-width: 1083px;
       border: 1px solid #a9c4e7;
       border-radius: 6px;
       padding: 10px 12px;
@@ -132,275 +107,67 @@ body {
       background-color: #ffffff;
       box-shadow: 0 8px 10px -4px #0000001a;
     }
+
+    .contact__field-error {
+      min-height: 18px;
+      font-size: 12px;
+      color: #ff3232;
+      opacity: 0;
+    }
+
+    .contact__field-error--visible {
+      opacity: 1;
+    }
   }
 
   &__btn {
     border-radius: 8px;
-    margin-top: 34px;
-    background-color: #7fa4db;
+    background-color: #496ac1;
     width: 171px;
     height: 40px;
     color: #ffffff;
   }
-
-  &__tablet-nav {
-    display: none;
-  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .contact {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 24px;
-    margin-bottom: 357px;
-
-    &__sidebar {
-      display: none;
-    }
-
-    &__card {
-      width: 464px;
-      height: 705px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      padding: 0;
-      border: none;
-      position: relative;
-      .arrow {
-        display: block;
-        width: 10px;
-        height: 10px;
-        position: relative;
-        top: 40px;
-        left: 10px;
-      }
-    }
+    max-width: 464px;
+    margin: 0;
+    padding: 0;
 
     &__title {
       text-align: center;
-      margin-top: 0;
       font-size: 16px;
       color: #232b4880;
+      margin-bottom: 24px;
     }
 
     &__form {
-      display: flex;
-      flex-direction: column;
-      gap: 42px;
       margin-top: 0;
     }
 
     &__row {
       flex-direction: column;
       gap: 24px;
-      margin: 0;
     }
 
     &__field {
-      width: 100%;
-      margin: 0;
-
       label {
         font-size: 14px;
       }
 
       input {
-        width: 464px;
-        height: 44px;
         font-size: 14px;
       }
 
       textarea {
-        width: 464px;
         height: 233px;
-        border: 1px solid #232b48;
-        box-shadow: none;
-        font-size: 14px;
-      }
-    }
-
-    &__btn {
-      width: 171px;
-      height: 40px;
-      margin-top: 0;
-      background-color: #496ac1;
-    }
-  }
-
-  /* 🔻 BOTTOM NAVIGATION */
-  .contact__tablet-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 92px;
-
-    background: #ffffff;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 24px 140px 24px 140px;
-
-    border-top: 1px solid #e0e6f0;
-  }
-
-  .vertical-line {
-    border-left: 2px solid #e2eaf7;
-    height: 18px;
-    width: 0px;
-  }
-
-  .contact__mobile-item {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: transparent;
-    border: none;
-  }
-
-  .contact__mobile-item.active {
-    background: #496ac1;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-// RESPONSIVE PHONE
-@media (max-width: 760px) {
-  .contact {
-    flex-direction: column;
-    align-items: center;
-    padding: 42px 10px 100px 10px;
-    margin-bottom: 357px;
-
-    &__sidebar {
-      display: none;
-    }
-
-    &__card {
-      width: 100%;
-      max-width: 464px;
-      height: 705px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      padding: 0;
-      border: none;
-      position: relative;
-
-      .arrow {
-        display: block;
-        width: 10px;
-        height: 10px;
-        position: relative;
-        top: 38px;
-        left: 10px;
-        cursor: pointer;
-      }
-    }
-
-    &__title {
-      text-align: center;
-      margin-top: 0;
-      font-size: 16px;
-      color: #232b4880;
-      font-feature-settings: unset;
-    }
-
-    &__form {
-      display: flex;
-      flex-direction: column;
-      gap: 42px;
-      margin-top: 0;
-      width: 100%;
-      max-width: 464px;
-    }
-
-    &__row {
-      flex-direction: column;
-      gap: 24px;
-      margin: 0;
-    }
-
-    &__field {
-      width: 100%;
-      margin: 0;
-
-      input {
-        max-width: 464px;
-        height: 44px;
-        font-size: 14px;
-      }
-      .inputName {
-        border: 1px solid #a9c4e7;
-      }
-
-      textarea {
-        width: 100%;
-        max-width: 464px;
-        height: 233px;
-        border: 1px solid #232b48;
         box-shadow: none;
       }
     }
 
     &__btn {
-      width: 171px;
-      height: 40px;
-      margin-top: 0;
-      background-color: #496ac1;
+      align-self: center;
     }
-  }
-
-  /* 🔻 BOTTOM NAVIGATION MOBILE */
-  .contact__tablet-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 92px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 55px;
-    border-top: 1px solid #e0e6f0;
-    .FileImage {
-      padding-left: 26px;
-    }
-    .ProfileImage {
-      margin-right: 26px;
-    }
-  }
-
-  .vertical-line {
-    border-left: 2px solid #e2eaf7;
-    height: 18px;
-    width: 0px;
-  }
-
-  .contact__mobile-item {
-    width: 24px;
-    height: 24px;
-    border-radius: 10px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-  }
-
-  .contact__mobile-item.active {
-    background: #496ac1;
-    min-width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
