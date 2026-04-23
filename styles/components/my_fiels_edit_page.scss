@@ -1,0 +1,215 @@
+
+.file-manager {
+  width: 1083px;
+  min-height: 976px;
+  gap: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  padding-top: 24px;
+  position: relative;
+  top: 24px;
+  left: 229px;
+  font-family: 'Noto Sans Georgian', sans-serif;
+  background-color: #f0f4f8;
+;
+
+  // ჩემი ფაილები title
+  &__title {
+    font-family: 'Noto Sans Georgian', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: rgba(35, 43, 72, 0.5); // #232B4880
+    margin: 0 0 16px 0;
+    align-self: start;
+    margin-left: 10px;
+  }
+
+  // Search bar
+  &__search {
+    width: 1083px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #A9C4E7;
+    border-radius: 8px;
+    padding: 0 16px;
+    background: #ffffff;
+    box-sizing: border-box;
+  }
+
+  &__search-icon {
+    width: 20px;
+    height: 20px;
+    color: rgba(35, 43, 72, 0.5);
+    flex-shrink: 0;
+  }
+
+  &__search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: 'Noto Sans Georgian', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #232B48;
+    background: transparent;
+
+    &::placeholder {
+      color: #A9C4E7;
+    }
+  }
+
+  // Table wrapper
+  &__table-wrapper {
+    width: 1083px;
+    min-height: 852px;
+    background: #ffffff;
+    border: 1px solid #e8ebf2;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // Table
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__th {
+    font-family: 'Noto Sans Georgian', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(35, 43, 72, 0.6);
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid #e8ebf2;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid #f0f2f7;
+    transition: background-color 0.15s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: #f8f9fc;
+    }
+  }
+
+  &__td {
+    padding: 16px 24px;
+    vertical-align: middle;
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__file-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: rgba(35, 43, 72, 0.5);
+    flex-shrink: 0;
+  }
+
+  &__file-name {
+    font-family: 'Noto Sans Georgian', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #232B48;
+  }
+
+  &__action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    color: rgba(35, 43, 72, 0.45);
+    transition: color 0.15s ease, background-color 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #4f5d8a;
+      background-color: #f0f2f7;
+    }
+
+    &--delete:hover {
+      color: #d44;
+      background-color: #fef2f2;
+    }
+  }
+
+  // Pagination
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 20px 0;
+  }
+
+  &__page {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Noto Sans Georgian', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #232B48;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+
+    &:hover:not(&--active):not(&--dots) {
+      background-color: #f0f2f7;
+    }
+
+    &--active {
+      background-color: #5b6abf;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    &--dots {
+      cursor: default;
+      color: rgba(35, 43, 72, 0.4);
+    }
+
+    &--next {
+      font-size: 20px;
+      color: rgba(35, 43, 72, 0.5);
+    }
+  }
+}

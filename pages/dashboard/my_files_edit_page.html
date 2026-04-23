@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/css/global.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="container">
+          <!-- logo -->
+          <div class="logo">
+            <a href="../../index.html"
+              ><img src="../../assets/images/svg/logo.svg" alt="logo"
+            /></a>
+          </div>
+
+          <!-- Burger Menu Button -->
+          <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- navigation -->
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li><a href="#">ჩვენ შესახებ</a></li>
+                <li>
+                  <a href="./authorization_registration.html">ავტორიზაცია</a>
+                </li>
+
+                <!-- Toggle language button -->
+                <div class="toggle-language">
+                  <input
+                    type="checkbox"
+                    id="toggle-button"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+          <nav>
+            <ul>
+              <!-- Language Toggle Mobile -->
+              <li class="toggle-language-item">
+                <div class="toggle-language-mobile">
+                  <input
+                    type="checkbox"
+                    id="toggle-button-mobile"
+                    class="toggle-button"
+                    checked
+                  />
+                  <label for="toggle-button-mobile" class="toggle-label">
+                    <span class="toggle-label-on">GE</span>
+                    <span class="toggle-label-off">EN</span>
+                  </label>
+                </div>
+              </li>
+
+              <!-- Navigation Links -->
+              <li><a href="#">ჩვენ შესახებ</a></li>
+              <li><a href="./pages/terms.html">გამოყენების წესები</a></li>
+              <li>
+                <a href="./pages/confidentalPage.html"
+                  >კონფიდენციალურობის პოლიტიკა</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Authorization/Registration Buttons -->
+          <div class="auth-buttons">
+            <button class="btn-authorization">ავტორიზაცია</button>
+            <button class="btn-registration">რეგისტრაცია</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+    <!-- main -->
+    <main class="file-manager">
+      <p class="file-manager__title">ჩემი ფაილები</p>
+
+      <div class="file-manager__search">
+        <img src=".././assets/images/svg/Search2.svg" alt="Search icon" />
+        <input
+          type="text"
+          class="file-manager__search-input"
+          placeholder="ძიება"
+        />
+      </div>
+
+      <div class="file-manager__table-wrapper">
+        <table class="file-manager__table">
+          <thead>
+            <tr>
+              <th class="file-manager__th">სახელი</th>
+              <th class="file-manager__th file-manager__th--center">
+                რედაქტირება
+              </th>
+              <th class="file-manager__th file-manager__th--center">
+                ჩამოტვირთვა
+              </th>
+              <th class="file-manager__th file-manager__th--center">წაშლა</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="file-manager__row">
+              <td class="file-manager__td">
+                <span class="file-manager__file-icon">
+                  <img src=".././assets/images/svg/File Text.svg" alt="" />
+                </span>
+                <span class="file-manager__file-name">ფაილის სახელი</span>
+              </td>
+              <td class="file-manager__td file-manager__td--center">
+                <button
+                  class="file-manager__action-btn"
+                  aria-label="რედაქტირება"
+                >
+                  <img src=".././assets/images/svg/Edit.svg" alt="" />
+                </button>
+              </td>
+              <td class="file-manager__td file-manager__td--center">
+                <button
+                  class="file-manager__action-btn"
+                  aria-label="ჩამოტვირთვა"
+                >
+                  <img src=".././assets/images/svg/Download.svg" alt="" />
+                </button>
+              </td>
+              <td class="file-manager__td file-manager__td--center">
+                <button
+                  class="file-manager__action-btn file-manager__action-btn--delete"
+                  aria-label="წაშლა"
+                >
+                  <img src=".././assets/images/svg/DELETE.svg" alt="" />
+                </button>
+              </td>
+            </tr>
+            <tr class="file-manager__row">
+              <td class="file-manager__td">
+                <span class="file-manager__file-icon">
+                  <img src=".././assets/images/svg/File Text.svg" alt="" />
+                </span>
+                <span class="file-manager__file-name">ფაილის სახელი</span>
+              </td>
+              <td class="file-manager__td file-manager__td--center">
+                <button
+                  class="file-manager__action-btn"
+                  aria-label="რედაქტირება"
+                >
+                  <img src=".././assets/images/svg/Edit.svg" alt="" />
+                </button>
+              </td>
+              <td class="file-manager__td file-manager__td--center">
+                <button
+                  class="file-manager__action-btn"
+                  aria-label="ჩამოტვირთვა"
+                >
+                  <img src=".././assets/images/svg/Download.svg" alt="" />
+                </button>
+              </td>
+              <td class="file-manager__td file-manager__td--center">
+                <button
+                  class="file-manager__action-btn file-manager__action-btn--delete"
+                  aria-label="წაშლა"
+                >
+                  <img src=".././assets/images/svg/DELETE.svg" alt="" />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <nav class="file-manager__pagination">
+          <a href="#" class="file-manager__page">1</a>
+          <a href="#" class="file-manager__page file-manager__page--active"
+            >2</a
+          >
+          <a href="#" class="file-manager__page">3</a>
+          <a href="#" class="file-manager__page">4</a>
+          <span class="file-manager__page file-manager__page--dots">...</span>
+          <a
+            href="#"
+            class="file-manager__page file-manager__page--next"
+            aria-label="შემდეგი"
+            >›</a
+          >
+        </nav>
+      </div>
+    </main>
+
+    <!-- main -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>
