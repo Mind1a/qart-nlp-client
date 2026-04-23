@@ -1,0 +1,16 @@
+{
+  "name": "qart-nlp-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass styles/global.scss styles/css/global.css",
+    "watch:css": "sass --watch styles/global.scss:styles/css/global.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

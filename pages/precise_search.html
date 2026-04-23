@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="sidebar sidebar--collapsed">
+        <div class="sidebar_header">
+          <img
+            class="sidebar_logoIcon"
+            src="../assets/images/svg/MiniLogo.svg"
+            alt="QartNLP"
+          />
+          <img
+            class="sidebar_logoText"
+            src="../assets/images/svg/LogoText.svg"
+            alt="QartNLP"
+          />
+        </div>
+
+        <div class="sidebar_divider"></div>
+
+        <ul class="sidebar_nav">
+          <li class="sidebar_navItem">
+            <img
+              class="sidebar_icon"
+              src="/assets/images/svg/ProfileFileAdd.svg"
+              alt=""
+            />
+            <span class="sidebar_label">ფაილის დამატება</span>
+          </li>
+          <li class="sidebar_navItem">
+            <img
+              class="sidebar_icon"
+              src="/assets/images/svg/ProfileFiles.svg"
+              alt=""
+            />
+            <span class="sidebar_label">ჩემი ფაილები</span>
+          </li>
+          <li class="sidebar_navItem">
+            <img
+              class="sidebar_icon"
+              src="/assets/images/svg/Support.svg"
+              alt=""
+            />
+            <span class="sidebar_label">კონტაქტი</span>
+          </li>
+        </ul>
+
+        <div class="sidebar_footer">
+          <div class="sidebar_avatar">ნ</div>
+          <span class="sidebar_username">ნინი გოცირიძე</span>
+        </div>
+      </div>
+      <div class="devider"></div>
+      <!-- Main -->
+      <div class="precise_main">
+        <h3 class="tablet_header">ფაილის დამატება</h3>
+        <nav class="breadcrumb">
+          <span class="breadcrumb__item breadcrumb__item--muted"
+            >ჩემი ფაილები ></span
+          >
+          <span class="breadcrumb__item breadcrumb__item--muted"
+            >ტექსტის სათაური ></span
+          >
+          <span class="breadcrumb__item breadcrumb__item--active"
+            >ტექსტის სათაური</span
+          >
+        </nav>
+
+        <div class="search">
+          <div class="search__input-wrap">
+            <input
+              class="search__input"
+              placeholder="ჩასაწერი ველი"
+              type="search"
+            />
+            <img src="../assets/images/svg/search.svg" alt="" />
+          </div>
+
+          <div class="search__add-form">
+            <button id="add-form">საძიებო ფორმის დამატება</button>
+            <img src="../assets/images/svg/plusicon.svg" alt="" />
+          </div>
+
+          <!-- active filters -->
+          <div class="search__active-filters"></div>
+
+          <!-- popuppp -->
+
+          <div class="search__popup search__popup_hidden" id="form-popup">
+            <div class="search__popup-header">
+              <div class="content">
+                <h3>მონიშნეთ სასურველი განყოფილება</h3>
+                <div class="line tablet_line"></div>
+                <button id="remember-btn">დამახსოვრება</button>
+              </div>
+              <div class="line line_desktop"></div>
+            </div>
+
+            <!-- popup body -->
+            <div class="search__popup-body">
+              <div class="main-filter">
+                <h5 class="search__popup-title">მეტყველების ნაწილი</h5>
+                <div class="filter-list grid">
+                  <div class="grid-col">
+                    <div class="filter-list__item" id="filter-btn">ფილტრი</div>
+                    <div class="filter-list__item" id="filter-btn2">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                  <div class="grid-col">
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                  <div class="grid-col">
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                  <div class="grid-col">
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                </div>
+              </div>
+              <div class="additional-filter" id="additional-filter">
+                <h5 class="search__popup-title">
+                  დამატებითი/ადაპტირებული თეგები
+                </h5>
+                <div class="filter-list grid">
+                  <div class="grid-col">
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                  <div class="grid-col">
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                  <div class="grid-col">
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                  <div class="grid-col">
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                    <div class="filter-list__item">ფილტრი</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- counter -->
+          <div class="counter">
+            <div class="counter-header">
+              <h5 class="counter__label">რიგითობის განსაზღვრა</h5>
+              <img src="../assets/images/svg/questionmarkicon.svg" alt="" />
+            </div>
+            <div class="counter__controls">
+              <button
+                class="counter__btn counter__btn--increment"
+                id="increment-btn"
+              >
+                +
+              </button>
+              <div class="counter__value" id="counter-value">0</div>
+              <button
+                class="counter__btn counter__btn--decrement"
+                id="decrement-btn"
+              >
+                -
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="result">
+          <div class="result_header">
+            <h3>ძიების შედეგები</h3>
+          </div>
+          <div class="result_label">სულ ნაპოვნია 5 შედეგი</div>
+          <div class="result_blocks">
+            <div class="result_block">
+              <div class="block_description">
+                ჭკუა უხმარ არც ბრიყვთათვის ჭკვა ცოდნოით მოიხმარებისუპირატესობა
+                ლათინური წარმოშობის და სისულელეა content Lorem ipsum ხელს
+                მომავალი უცვლელი გამოცემა უშლის მკითხველს სცილდება შინაარსი
+                ტექსტი და შესაბამისადყურადღების ლაზიერი
+                გამახვილება გრაფიკული დიზაინისმართლაც ტექსტში Lorem Ipsum აქვს
+                უპირატესობა განსხვავებით generic ტექსტი გამოყენებით ცვლადი
+                სიტყვის სიგრძე სიმულაცია ნორმალური დატვირთვის მოდელი ისერომ იგი
+                შეესაბამება საბოლოო პროდუქტი და უზრუნველყოს
+              </div>
+              <div class="additional_page">მონაკვეთზე გადასვლა</div>
+            </div>
+            <div class="result_block">
+              <div class="block_description">
+                ჭკუა უხმარ არც ბრიყვთათვის ჭკვა ცოდნოით მოიხმარებისუპირატესობა
+                ლათინური წარმოშობის და სისულელეა content Lorem ipsum ხელს
+                მომავალი უცვლელი გამოცემა უშლის მკითხველს სცილდება შინაარსი
+                ტექსტი და შესაბამისადყურადღების ლაზიერი
+                გამახვილება გრაფიკული დიზაინისმართლაც ტექსტში Lorem Ipsum აქვს
+                უპირატესობა განსხვავებით generic ტექსტი გამოყენებით ცვლადი
+                სიტყვის სიგრძე სიმულაცია ნორმალური დატვირთვის მოდელი ისერომ იგი
+                შეესაბამება საბოლოო პროდუქტი და უზრუნველყოს
+              </div>
+              <div class="additional_page">მონაკვეთზე გადასვლა</div>
+            </div>
+          </div>
+          <div class="pagination">
+            <div class="container">
+              <button class="page-btn">1</button>
+              <button class="page-btn active">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn">4</button>
+              <span class="page-btn">···</span>
+              <button class="page-btn">></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="botombar_box"></div>
+      <div class="bottombar">
+        <div class="bottombar_nav">
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/fileaddbtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/filebtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem">
+            <img src="../assets/images/svg/supportbtm.svg" alt="" />
+          </div>
+          <div class="bottombar_devider"></div>
+          <div class="bottombar_navItem bottombar_navItem--active">
+            <img src="../assets/images/svg/user.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/precise_search.js"></script>
+  </body>
+</html>
